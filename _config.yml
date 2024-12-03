@@ -1,7 +1,7 @@
-title: "SPONGE"
-email: tim-lukas.habich@imes.uni-hannover.de
+title: "SafePR"
+email: aran.mohammad@imes.uni-hannover.de
 description: >-
-  Open-Source Designs of Articulated Soft Robots
-github_username: tlhabich
+  Unified Approach for Safe Parallel Robots
+github_username: aranmoha
 remote_theme: pmarsceill/just-the-docs
 color_scheme: "theme"
