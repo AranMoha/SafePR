@@ -24,10 +24,11 @@ This includes not only the algorithmic integration of the contact detection and 
 
 ## Video
 
+
 ## Citing
 The paper is freely available via arXiv. If you use parts of this project for your research, please cite the following publication:
 ```
-SPONGE: SafePR - Unified Approach for Safe Parallel Robots: Contact Detection and Reaction with Redundancy Resolution
+SafePR - Unified Approach for Safe Parallel Robots: Contact Detection and Reaction with Redundancy Resolution
 A. Mohammad, T.-L. Habich, T. Seel and M. Schappler
 IEEE Transactions on Robotics (TRO) 2025
 DOI: TBD
