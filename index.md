@@ -11,16 +11,16 @@ nav_order: 1
 SafePR is an unified approach for **safe** **p**arallel **r**obot for physical human-robot interaction that is being developed at the Leibniz University Hannover by the [Institute of Mechatronic Systems](https://www.imes.uni-hannover.de/en/).
 
 ## Why SafePR?
-Die Motivation dieses pages sind zwei Punkte.
+This pages' motivation is twofold.
 
-Erstens, Fast and safe motion is crucial for the long-term successful deployment of physically interactive robots.
+Firstly, Fast and safe motion is crucial for the long-term successful deployment of physically interactive robots.
 Parallel robots offer the potential for higher speeds while maintaining the same energy limits due to their low moving masses.
-In der unten genannten Arbeit, we address this issue and present an unified approach, termed as SafePR, for detection, type-distinguishing, as well as localizing the contacts to perform a reaction that is safe for humans and feasible for parallel robot.
-Der dazugehörige Code ist hier zu finden und beschrieben, um andere Forschende die Mgölcihkeit der Nutzung und Weiterentwicklung zu geben.
+However, they require methods for contact detection and reaction in high-speed scenarios for safe interaction.
+In the work linked below, we address this issue and present an unified approach, termed as SafePR, for detection, type-distinguishing, as well as localizing the contacts to perform a reaction that is safe for humans and feasible for parallel robot.
+The corresponding code can be found and described here to give other researchers the opportunity to use and further develop it.
 
-Zweitens, ist die Inbetriebnahme von eigens gebauten Robotersystemen sehr aufwändig und in vielen Arbeiten werden bereits kommerziell erhältliche Systeme verwendet, die nicht immer einen vollständigen Zugriff auf Echtzeit-Signale, wie Gelenkmomente, zulassen (können). Aus diesen Gründen ist hier auch das vollständige Simulink-Modell des SafePR-Agorithmus zu finden.
-Darin ist nicht nur die algorithmische Verzahnung der Kontakterkennungs- und reaktionsmethoden, sondern auch die Implementierung der Logik, um ein mechatronisches System robust und wiederholbar zu steuern.
-
+Secondly, the commissioning of custom-built robot systems is very complex and many works already use commercially available systems that do not (or cannot) always allow full access to real-time signals such as joint torques. For these reasons, the complete Simulink model of the SafePR algorithm can also be found here.
+This includes not only the algorithmic integration of the contact detection and reaction methods, but also the implementation of the logic to control a mechatronic system in a robust and repeatable manner.
 
 ## Video
 
