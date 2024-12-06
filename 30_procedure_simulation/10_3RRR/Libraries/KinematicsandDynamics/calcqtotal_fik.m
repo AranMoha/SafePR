@@ -1,5 +1,5 @@
 function q = calcqtotal_fik(x, param)
-    [qa, qp] = calcq(x, param.kin_params, param.psi_j, param.beta_j, param.r_fixPlat_j, param.r_mobPlat_j, param.l_all_id);
+    [qa, qp] = calcq(x, param.psi_j, param.beta_j, param.r_fixPlat_j, param.r_mobPlat_j, param.l_all_id);
     phie = x(3); 
     q13 = phie - (param.psi_j(1) + qa(1) + qp(1)); 
     q23 = phie - (param.psi_j(2) + qa(2) + qp(2)); 

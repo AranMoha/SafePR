@@ -1,36 +1,36 @@
-function [x_out , iter_final, converged_detLimit_OPspaceLimits_check]= find_dk_simulink(qa, x_0, kin_params, psi_j, beta_j, r_fixPlat_j, r_mobPlat_j, l_all_id, l_all, r_BasisPla_MobPla, ...
-                                  max_iter_find_dk_simulink, max_radius, max_phie, min_det_JacA_hredx, min_det_JacB_hredqa)
+function [x_out , iter_final, converged_detLimit_OPspaceLimits_check]= find_fk_simulink(qa, x_0, kin_params, psi_j, beta_j, r_fixPlat_j, r_mobPlat_j, l_all_id,...
+                                  max_iter_find_fk_simulink, max_radius, max_phie, min_det_JacA_hredx, min_det_JacB_hredqa)
                               
-    % Funktion für die direkte Kinematik mittels Newton-Raphson
-    % Mit dieser Funktion kann die Plattformpose bei bekannten Antriebskoordinaten qa und einer Startschätzung x0 berechnet werden.
-    % Eingabe:
-    % qa in rad: Aktive Gelenkwinkel (3x1)
-    % x_0 in m und rad: Plattform-Koordinaten im Basis-KS (1x3)
+    % Function for forward kinematics using Newton-Raphson
+    % This function can be used to calculate the platform pose with known drive coordinates qa and an initial estimate x0.
+    % Input:
+    % qa in rad: Active joint's angle (3x1)
+    % x_0 in m and rad: Platform coordinates in the base CS (1x3)
     %
-    % Ausgabe:
-    % x_out in m und rad: Ergebnis der Optimierung (3x1)
-    % iter_final: Benötigte Iterationsanzahl
-    % converged_detLimit_OPspaceLimits_check: 3x1 Vektor mit binären
-    % Einträgen, ob 
-    %   (i)   das Optimierungsproblem konvergiert ist
-    %   (ii)  die Determinanten der Jacobi-Matrizen dhred/dqa und dhred/dx basierend auf x_out eingehalten sind
-    %   (iii) x_out innerhalb der Arbeitsraumgrenzen ist
+    % Output:
+    % x_out in m and rad: Result of the optimization (3x1)
+    % iter_final: Required number of iterations
+    % converged_detLimit_OPspaceLimits_check: 3x1 vector with binary
+    % entries, whether 
+    % (i) the optimization problem has converged
+    % (ii) the determinants of the Jacobian matrices dhred/dqa and dhred/dx based on x_out are satisfied
+    % (iii) x_out is within the workspace bounds
 
     % Aran Mohammad, aran.mohammad@imes.uni-hannover.de, 2022-12
-    % (C) Institut für Mechatronische Systeme, Universität Hannover
+    % (C) Institute for Mechatronic Systems, Leibniz University Hanover
+                        
                               
-                              
-    % Startwerte setzen 
-    iter = 0; % Iterationsvariable für die while-Schleife der Optimierung
+    % Setting initial values
+    iter = 0; % Iteration variable for the while loop of the optimization
     lambda = 0;
-    x_old = [100; 100; 100]; % Muss ungleich x_0 sein
-    qa0_find_dk = [100;100;100]; % Muss ungleich qa sein
-    x = x_0; % Startwert für x
-    det_limit_overflow = 1; % Singularitätsgrenzen sind verletzt
+    x_old = [100; 100; 100]; % Must be unequal to x_0
+    qa0_find_dk = [100;100;100]; % Must be unequal to qa
+    x = x_0; % Initial value for x
+    det_limit_overflow = 1; % Singularity limits are violated
     
-    while (norm(x_old-x) > 10^(-7) && iter< max_iter_find_dk_simulink)
+    while (norm(x_old-x) > 10^(-7) && iter< max_iter_find_fk_simulink)
         x_old = x;
-        [qa0_find_dk, qp0_find_dk] = calcq(x_old, kin_params, psi_j, beta_j, r_fixPlat_j, r_mobPlat_j, l_all_id)   ; 
+        [qa0_find_dk, qp0_find_dk] = calcq(x_old, psi_j, beta_j, r_fixPlat_j, r_mobPlat_j, l_all_id)   ; 
         f = qa - qa0_find_dk;
         xEE = toX_t6_single(x');
         qj_rad  = calcq9D(qa0_find_dk, qp0_find_dk, x, psi_j);
@@ -39,12 +39,11 @@ function [x_out , iter_final, converged_detLimit_OPspaceLimits_check]= find_dk_s
         J_hredqa_3RRRreturn = JacB_hredqa_ind_3RRR(qj_rad, xEE, l_all_id, r_fixPlat_j, r_mobPlat_j, psi_j, beta_j);
 
         if abs(det(J_hredx_3RRRreturn)) > min_det_JacA_hredx && abs(det(J_hredqa_3RRRreturn)) >  min_det_JacB_hredqa % Überprüfe, ob EE-Pose entfernt genug einer Singularität ist
-            det_limit_overflow = 0; % Gebe numerisches xEE aus
+            det_limit_overflow = 0; % Output numeric xEE
         else
-            det_limit_overflow = 1; % Gebe geometrisches xEE (=x_0) aus
+            det_limit_overflow = 1; % Output geometric xEE (=x_0)
             break
         end
-%         x = x_old -  -(-J_hredqa_3RRRreturn\ J_hredx_3RRRreturn)\ f;
         Jinv = -(J_hredqa_3RRRreturn\ J_hredx_3RRRreturn);
         J = Jinv\ eye(3,3);
         x = x_old + J*f;       
@@ -62,13 +61,13 @@ function [x_out , iter_final, converged_detLimit_OPspaceLimits_check]= find_dk_s
         converged = 0;        
     end
     
-    if det_limit_overflow == 0 % Singularitätsbedingungen sind erfüllt
+    if det_limit_overflow == 0 % Singularity conditions are fulfilled
         r = sqrt(x(1)^2+x(2)^2); 
-        if r <= max_radius && abs(x(3))<= max_phie % Maximal erlaubter Radius und Winkel
-            x_out = x; % Gebe numerisches x aus
+        if r <= max_radius && abs(x(3))<= max_phie % Maximum permitted radius and angle
+            x_out = x; % Output numeric xEE
             OPspaceLimits_check = 1;
         else
-            x_out = x_0; % Gebe geometrisches x aus
+            x_out = x_0; % Output geometric xEE (=x_0)
             OPspaceLimits_check = 0;
         end
     else
