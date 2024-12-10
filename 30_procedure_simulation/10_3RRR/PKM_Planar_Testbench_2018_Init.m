@@ -21,6 +21,8 @@ end
 %% Setting kinematic and dynamic parameters
 % Selection of dynamic and safety parameters for real-world test bench
 param.Exp = 0;
+% Selection of simulation with capsule for contact experiments
+param.capsule_active = 1;
 % Sampling time in s
 param.t_sample=0.001; 
 % Thresholds for contact detection, leads to the controller being switched off
@@ -29,7 +31,7 @@ param.CollDet_limit_MobPlat = [40;40;2]*1.5;
 param.CollDet_limit_MobPlat_soft = [10;10;1];
 % Threhsolds for collided-body classification (decision tree)
 param.min_dist_threshold = 0.05; % Below this distance, link collision (corresponds to the distance of the line of action to one of the three platform coupling points)
-param.min_angle_threshold_grad = 35; % Below this value, parallelism is assumed between the line of action and the vector from the elbow to the platform coupling joint
+param.min_angle_threshold_deg = 35; % Below this value, parallelism is assumed between the line of action and the vector from the elbow to the platform coupling joint
 param.min_torque_threshold = 2.5; % Below this value, it is assumed that the corresponding active joint does not sense the contact force
 % Base and platform radii
 param.r_BasisPla_MobPla = [0.6829, 0.107 ]; % in m 
@@ -62,7 +64,7 @@ param.m = [2.272; 0.75; 0.642]; % in kg
 param.Ifges2 = [0, 0, param.m(1)*param.l_all(1)^2*1/12, 0, 0, 0; 
          0, 0, param.m(2)*param.l_all(2)^2*1/12, 0, 0, 0;
          0, 0,  param.m(3)/2*param.r_BasisPla_MobPla(2)^2, 0, 0, 0];     
-% Minimaldynamische Parameter mit neuen Reibwerten    
+% Minimum dynamics parameters with new friction coefficients    
 if param.Exp
     param.MDP = [param.l_all(1)^2*param.m(2) + param.m(1)*param.scj1^2 + param.m(2)*param.scj2^2 + param.Ifges2(2,3) + param.Ifges2(1,3); 
            param.m(2)*param.scj2^2 + param.Ifges2(2,3);
@@ -113,13 +115,13 @@ param.maxerry = 0.01; % m
 % Permissible minimum distance between two segments of two kinematic chains
 param.dmin_SelfColl_m = 0.05; % in m
 % Maximum number of iterations of the Newton-Raphson algorithm for direct kinematics 
-param.max_iter_find_dk_simulink = 10;
+param.max_iter_find_fk_simulink = 10;
 % Maximum number of iterations of a trajectory 
 param.len_traj_init = 8000;
 % Cut-off frequency of a 1st order low-pass filter
-param.f_tp_Hz = 30; % in Hz
+param.f_lp_Hz = 30; % in Hz
 % Parameters for z-transforms of the 1st order low-pass filter
-param.fz_tp = 2/(2*pi*param.f_tp_Hz*param.t_sample); 
+param.fz_lp = 2/(2*pi*param.f_lp_Hz*param.t_sample); 
 % Observer gain matrix
 param.Kox=1e1*diag([2 ,2,1]);
 
@@ -139,7 +141,7 @@ param.XD0_t = [0 0 zeros(1,3) 0];
 param.XDD0_t = [0 0 zeros(1,3) 0];
 
 % Inverse kinematics for starting values of the active and passive joint angles
-[param.qa0, param.qp0] = calcq(param.X0_t([1,2,6]), param.kin_params, param.psi_j, param.beta_j, param.r_fixPlat_j, param.r_mobPlat_j, param.l_all_id);
+[param.qa0, param.qp0] = calcq(param.X0_t([1,2,6]), param.psi_j, param.beta_j, param.r_fixPlat_j, param.r_mobPlat_j, param.l_all_id);
 
 % Start values for joint coordinates in rad, rad/s
 param.q0 = [param.qa0(1); param.qp0(1); param.X0_t(6) - (param.psi_j(1) + param.qa0(1) + param.qp0(1)); ...
@@ -268,3 +270,4 @@ if param.Exp == 0
     mjx('set_visflag', 'Contact Point', 1)
     % mjx('set_visflag', 'Static Body', 0)
 end
+%%
