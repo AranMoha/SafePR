@@ -134,8 +134,8 @@ __MWOPC_PART_BEGIN__ /metadata/coreProperties.xml
   <dcterms:created xsi:type="dcterms:W3CDTF">2020-03-24T17:08:24Z</dcterms:created>
   <dc:creator>schappler</dc:creator>
   <cp:lastModifiedBy>mohammad_admin</cp:lastModifiedBy>
-  <dcterms:modified xsi:type="dcterms:W3CDTF">2024-12-09T18:09:37Z</dcterms:modified>
-  <cp:revision>12.238</cp:revision>
+  <dcterms:modified xsi:type="dcterms:W3CDTF">2024-12-13T13:02:25Z</dcterms:modified>
+  <cp:revision>12.239</cp:revision>
   <cp:version>R2024a</cp:version>
 </cp:coreProperties>
 
@@ -212,7 +212,7 @@ __MWOPC_PART_BEGIN__ /simulink/blockdiagram.xml
     <ConfigManagerSettings>
       <P Name="ModifiedByFormat">%&lt;Auto&gt;</P>
       <P Name="ModifiedDateFormat">%&lt;Auto&gt;</P>
-      <P Name="ModelVersionFormat">%&lt;AutoIncrement:12.238&gt;</P>
+      <P Name="ModelVersionFormat">%&lt;AutoIncrement:12.239&gt;</P>
     </ConfigManagerSettings>
     <EditorSettings>
       <P Name="SampleTimeColors">on</P>
@@ -2012,8 +2012,8 @@ to Degrees</P>
 __MWOPC_PART_BEGIN__ /simulink/modelDictionary.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <MF0 version="1.1" defaultPackage="slid" packageUris="http://schema.mathworks.com/mf0/slid/R2023a_20220628">
-  <System type="System" uuid="1857d8e9-5e62-47a5-8abe-c1ea11f8e32c">
-    <Interface type="Interface" uuid="45fc23f2-8d30-4db4-b92a-1000ee02b0b4"/>
+  <System type="System" uuid="1a62b032-fd0e-4eb5-b5d3-a066bf19c82e">
+    <Interface type="Interface" uuid="73b7f71d-2f70-4adf-b2bd-fd5cabdbf228"/>
   </System>
 </MF0>
 __MWOPC_PART_BEGIN__ /simulink/ScheduleCore.xml
@@ -13141,8 +13141,6 @@ __MWOPC_PART_BEGIN__ /simulink/stateflow/chart_705.xml
   <P Name="viewLimits">[0 156.75 0 153.75]</P>
   <P Name="screen">[1 1 3600 1200 1.180555555555556]</P>
   <P Name="viewObj">705</P>
-  <P Name="visible">1</P>
-  <subviewS/>
   <P Name="ssIdHighWaterMark">25</P>
   <P Name="decomposition">CLUSTER_CHART</P>
   <P Name="type">EML_CHART</P>
@@ -28564,7 +28562,7 @@ to Degrees</P>
     <P Name="Position">[-1125, 2730, -930, 3400]</P>
     <P Name="ZOrder">100000</P>
     <P Name="ForegroundColor">red</P>
-    <P Name="LibraryVersion">8.107</P>
+    <P Name="LibraryVersion">8.108</P>
     <P Name="SourceBlock">Cust_Library_planarPKM/Statemachine</P>
     <P Name="SourceType">SubSystem</P>
     <InstanceData>
@@ -28680,7 +28678,7 @@ to Degrees</P>
     <P Name="Position">[585, 2177, 740, 2313]</P>
     <P Name="ZOrder">100000</P>
     <P Name="ForegroundColor">red</P>
-    <P Name="LibraryVersion">8.107</P>
+    <P Name="LibraryVersion">8.108</P>
     <P Name="FontName">Arial</P>
     <P Name="FontSize">12</P>
     <P Name="SourceBlock">Cust_Library_planarPKM/Trajectory planning</P>
@@ -28713,7 +28711,7 @@ to Degrees</P>
     <P Name="Position">[25, 3161, 165, 3384]</P>
     <P Name="ZOrder">100000</P>
     <P Name="ForegroundColor">red</P>
-    <P Name="LibraryVersion">8.107</P>
+    <P Name="LibraryVersion">8.108</P>
     <P Name="FontName">Arial</P>
     <P Name="FontSize">12</P>
     <P Name="SourceBlock">Cust_Library_planarPKM/Trajectory planning</P>
@@ -28743,7 +28741,7 @@ to Degrees</P>
     <P Name="Position">[995, 3157, 1150, 3358]</P>
     <P Name="ZOrder">100000</P>
     <P Name="ForegroundColor">red</P>
-    <P Name="LibraryVersion">8.107</P>
+    <P Name="LibraryVersion">8.108</P>
     <P Name="FontName">Arial</P>
     <P Name="FontSize">12</P>
     <P Name="SourceBlock">Cust_Library_planarPKM/Trajectory planning</P>
@@ -28773,7 +28771,7 @@ to Degrees</P>
     <P Name="Position">[2225, 3192, 2390, 3403]</P>
     <P Name="ZOrder">100000</P>
     <P Name="ForegroundColor">red</P>
-    <P Name="LibraryVersion">8.107</P>
+    <P Name="LibraryVersion">8.108</P>
     <P Name="FontName">Arial</P>
     <P Name="FontSize">12</P>
     <P Name="SourceBlock">Cust_Library_planarPKM/Trajectory planning</P>
@@ -28803,7 +28801,7 @@ to Degrees</P>
     <P Name="Position">[-165, 3844, -20, 4061]</P>
     <P Name="ZOrder">100000</P>
     <P Name="ForegroundColor">red</P>
-    <P Name="LibraryVersion">8.107</P>
+    <P Name="LibraryVersion">8.108</P>
     <P Name="FontName">Arial</P>
     <P Name="FontSize">12</P>
     <P Name="SourceBlock">Cust_Library_planarPKM/Trajectory planning</P>
@@ -28833,7 +28831,7 @@ to Degrees</P>
     <P Name="Position">[-165, 3574, -20, 3791]</P>
     <P Name="ZOrder">100000</P>
     <P Name="ForegroundColor">red</P>
-    <P Name="LibraryVersion">8.107</P>
+    <P Name="LibraryVersion">8.108</P>
     <P Name="FontName">Arial</P>
     <P Name="FontSize">12</P>
     <P Name="SourceBlock">Cust_Library_planarPKM/Trajectory planning</P>
@@ -28917,7 +28915,7 @@ to Degrees</P>
     <PortCounts in="1" out="2"/>
     <P Name="Position">[1250, 1419, 1340, 1466]</P>
     <P Name="ZOrder">100000</P>
-    <P Name="LibraryVersion">8.107</P>
+    <P Name="LibraryVersion">8.108</P>
     <P Name="SourceBlock">Cust_Library_planarPKM/calc_full_ik</P>
     <P Name="SourceType">Full inverse kinematics</P>
     <InstanceData>
@@ -28946,7 +28944,7 @@ to Degrees</P>
     <PortCounts in="3" out="1"/>
     <P Name="Position">[1420, 1427, 1535, 1483]</P>
     <P Name="ZOrder">100000</P>
-    <P Name="LibraryVersion">8.107</P>
+    <P Name="LibraryVersion">8.108</P>
     <P Name="SourceBlock">Cust_Library_planarPKM/calc_q_rotConstraints</P>
     <P Name="SourceType">Calculate q via rotational kinematic constraints</P>
     <InstanceData>
@@ -31034,14 +31032,14 @@ to Degrees</P>
   <Line>
     <P Name="Name">dxp_des</P>
     <P Name="ZOrder">10964</P>
-    <P Name="Labels">[2, 1]</P>
+    <P Name="Labels">[0, 0]</P>
     <P Name="Src">8393#out:1</P>
     <P Name="Dst">2234#in:21</P>
   </Line>
   <Line>
     <P Name="Name">ddxp_des</P>
     <P Name="ZOrder">10966</P>
-    <P Name="Labels">[2, 1]</P>
+    <P Name="Labels">[0, 0]</P>
     <P Name="Src">8394#out:1</P>
     <P Name="Dst">2234#in:22</P>
   </Line>
@@ -31938,7 +31936,7 @@ to Degrees</P>
     <P Name="BackgroundColor">[0.901961, 0.901961, 1.000000]</P>
     <P Name="DropShadow">on</P>
     <P Name="AnnotationType">area_annotation</P>
-    <P Name="ZOrder">35353</P>
+    <P Name="ZOrder">35367</P>
     <P Name="FontSize">12</P>
   </Annotation>
   <Annotation SID="13635">
@@ -31950,7 +31948,7 @@ to Degrees</P>
     <P Name="BackgroundColor">[0.901961, 0.901961, 1.000000]</P>
     <P Name="DropShadow">on</P>
     <P Name="AnnotationType">area_annotation</P>
-    <P Name="ZOrder">35356</P>
+    <P Name="ZOrder">35370</P>
     <P Name="FontSize">12</P>
   </Annotation>
   <Annotation SID="13632">
@@ -31963,7 +31961,7 @@ to Degrees</P>
     <P Name="BackgroundColor">[0.901961, 0.901961, 1.000000]</P>
     <P Name="DropShadow">on</P>
     <P Name="AnnotationType">area_annotation</P>
-    <P Name="ZOrder">35366</P>
+    <P Name="ZOrder">35380</P>
     <P Name="FontSize">12</P>
   </Annotation>
   <Annotation SID="13622">
@@ -31976,7 +31974,7 @@ to Degrees</P>
     <P Name="BackgroundColor">[0.901961, 0.901961, 1.000000]</P>
     <P Name="DropShadow">on</P>
     <P Name="AnnotationType">area_annotation</P>
-    <P Name="ZOrder">35354</P>
+    <P Name="ZOrder">35368</P>
     <P Name="FontSize">12</P>
   </Annotation>
   <Annotation SID="13621">
@@ -31989,7 +31987,7 @@ to Degrees</P>
     <P Name="BackgroundColor">[0.901961, 0.901961, 1.000000]</P>
     <P Name="DropShadow">on</P>
     <P Name="AnnotationType">area_annotation</P>
-    <P Name="ZOrder">35355</P>
+    <P Name="ZOrder">35369</P>
     <P Name="FontSize">12</P>
   </Annotation>
   <Annotation SID="13620">
@@ -32001,7 +31999,7 @@ to Degrees</P>
     <P Name="BackgroundColor">[0.901961, 0.901961, 1.000000]</P>
     <P Name="DropShadow">on</P>
     <P Name="AnnotationType">area_annotation</P>
-    <P Name="ZOrder">35360</P>
+    <P Name="ZOrder">35374</P>
     <P Name="FontSize">12</P>
   </Annotation>
   <Annotation SID="13244">
@@ -32014,7 +32012,7 @@ to Degrees</P>
     <P Name="BackgroundColor">[0.901961, 0.901961, 1.000000]</P>
     <P Name="DropShadow">on</P>
     <P Name="AnnotationType">area_annotation</P>
-    <P Name="ZOrder">35363</P>
+    <P Name="ZOrder">35377</P>
     <P Name="FontSize">12</P>
   </Annotation>
   <Annotation SID="8460">
@@ -32027,7 +32025,7 @@ to Degrees</P>
     <P Name="BackgroundColor">[0.901961, 0.901961, 1.000000]</P>
     <P Name="DropShadow">on</P>
     <P Name="AnnotationType">area_annotation</P>
-    <P Name="ZOrder">35365</P>
+    <P Name="ZOrder">35379</P>
     <P Name="FontSize">12</P>
   </Annotation>
   <Annotation SID="7021">
@@ -32040,7 +32038,7 @@ to Degrees</P>
     <P Name="BackgroundColor">[0.901961, 0.901961, 1.000000]</P>
     <P Name="DropShadow">on</P>
     <P Name="AnnotationType">area_annotation</P>
-    <P Name="ZOrder">35362</P>
+    <P Name="ZOrder">35376</P>
     <P Name="FontSize">12</P>
   </Annotation>
   <Annotation SID="3508">
@@ -32054,7 +32052,7 @@ and the corresponding joint angles are in the joint space</P>
     <P Name="BackgroundColor">[0.901961, 0.901961, 1.000000]</P>
     <P Name="DropShadow">on</P>
     <P Name="AnnotationType">area_annotation</P>
-    <P Name="ZOrder">35361</P>
+    <P Name="ZOrder">35375</P>
     <P Name="FontSize">12</P>
   </Annotation>
   <Annotation SID="3507">
@@ -32067,7 +32065,7 @@ and the corresponding joint angles are in the joint space</P>
     <P Name="BackgroundColor">[0.901961, 0.901961, 1.000000]</P>
     <P Name="DropShadow">on</P>
     <P Name="AnnotationType">area_annotation</P>
-    <P Name="ZOrder">35358</P>
+    <P Name="ZOrder">35372</P>
     <P Name="FontSize">12</P>
   </Annotation>
   <Annotation SID="3035">
@@ -32081,7 +32079,7 @@ to determine the target EE pose, target EE velocity and target EE acceleration (
     <P Name="BackgroundColor">[0.901961, 0.901961, 1.000000]</P>
     <P Name="DropShadow">on</P>
     <P Name="AnnotationType">area_annotation</P>
-    <P Name="ZOrder">35357</P>
+    <P Name="ZOrder">35371</P>
     <P Name="FontSize">12</P>
   </Annotation>
   <Annotation SID="6964">
@@ -32094,7 +32092,7 @@ to determine the target EE pose, target EE velocity and target EE acceleration (
     <P Name="BackgroundColor">[0.901961, 0.901961, 1.000000]</P>
     <P Name="DropShadow">on</P>
     <P Name="AnnotationType">area_annotation</P>
-    <P Name="ZOrder">35359</P>
+    <P Name="ZOrder">35373</P>
     <P Name="FontName">Arial</P>
     <P Name="FontSize">26</P>
   </Annotation>
@@ -32108,7 +32106,7 @@ to determine the target EE pose, target EE velocity and target EE acceleration (
     <P Name="BackgroundColor">[0.901961, 0.901961, 1.000000]</P>
     <P Name="DropShadow">on</P>
     <P Name="AnnotationType">area_annotation</P>
-    <P Name="ZOrder">35364</P>
+    <P Name="ZOrder">35378</P>
     <P Name="FontSize">12</P>
   </Annotation>
 </System>
@@ -34473,7 +34471,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_3282.xml
     <PortCounts in="2" out="2"/>
     <P Name="Position">[1325, 533, 1450, 602]</P>
     <P Name="ZOrder">100000</P>
-    <P Name="LibraryVersion">8.107</P>
+    <P Name="LibraryVersion">8.108</P>
     <P Name="SourceBlock">Cust_Library_planarPKM/Detection</P>
     <P Name="SourceType">Function for determining whether a maximum permissible force, moment or torque value has been exceeded </P>
     <InstanceData>
@@ -35039,7 +35037,7 @@ to Degrees</P>
     <PortCounts in="1" out="3"/>
     <P Name="Position">[285, 658, 410, 712]</P>
     <P Name="ZOrder">100000</P>
-    <P Name="LibraryVersion">8.107</P>
+    <P Name="LibraryVersion">8.108</P>
     <P Name="SourceBlock">Cust_Library_planarPKM/calc_fk_eachChain</P>
     <P Name="SourceType">Function for determining the direct kinematics across all three leg chains</P>
     <InstanceData>
@@ -35071,7 +35069,7 @@ to Degrees</P>
     <PortCounts in="3" out="1"/>
     <P Name="Position">[495, 752, 610, 828]</P>
     <P Name="ZOrder">100000</P>
-    <P Name="LibraryVersion">8.107</P>
+    <P Name="LibraryVersion">8.108</P>
     <P Name="SourceBlock">Cust_Library_planarPKM/check_fk_all_chains</P>
     <P Name="SourceType">Function for checking whether the direct kinematics of the three serial chains lead to the same platform pose</P>
     <InstanceData>
@@ -35094,7 +35092,7 @@ to Degrees</P>
     <PortCounts in="3" out="1"/>
     <P Name="Position">[630, 548, 730, 602]</P>
     <P Name="ZOrder">100000</P>
-    <P Name="LibraryVersion">8.107</P>
+    <P Name="LibraryVersion">8.108</P>
     <P Name="SourceBlock">Cust_Library_planarPKM/check_operational_space_limit</P>
     <P Name="SourceType">Function for checking whether operational space limits are maintained</P>
     <InstanceData>
@@ -35117,7 +35115,7 @@ to Degrees</P>
     <PortCounts in="3" out="1"/>
     <P Name="Position">[515, 608, 615, 662]</P>
     <P Name="ZOrder">100000</P>
-    <P Name="LibraryVersion">8.107</P>
+    <P Name="LibraryVersion">8.108</P>
     <P Name="SourceBlock">Cust_Library_planarPKM/check_operational_space_limit</P>
     <P Name="SourceType">Function for checking whether operational space limits are maintained</P>
     <InstanceData>
@@ -35140,7 +35138,7 @@ to Degrees</P>
     <PortCounts in="3" out="1"/>
     <P Name="Position">[595, 668, 695, 722]</P>
     <P Name="ZOrder">100000</P>
-    <P Name="LibraryVersion">8.107</P>
+    <P Name="LibraryVersion">8.108</P>
     <P Name="SourceBlock">Cust_Library_planarPKM/check_operational_space_limit</P>
     <P Name="SourceType">Function for checking whether operational space limits are maintained</P>
     <InstanceData>
@@ -35973,7 +35971,7 @@ To Constant</P>
     <P Name="BackgroundColor">[0.901961, 0.901961, 1.000000]</P>
     <P Name="DropShadow">on</P>
     <P Name="AnnotationType">area_annotation</P>
-    <P Name="ZOrder">4878</P>
+    <P Name="ZOrder">4884</P>
     <P Name="FontSize">12</P>
   </Annotation>
   <Annotation SID="13611">
@@ -35986,7 +35984,7 @@ To Constant</P>
     <P Name="BackgroundColor">[0.901961, 0.901961, 1.000000]</P>
     <P Name="DropShadow">on</P>
     <P Name="AnnotationType">area_annotation</P>
-    <P Name="ZOrder">4876</P>
+    <P Name="ZOrder">4882</P>
     <P Name="FontSize">12</P>
   </Annotation>
   <Annotation SID="13610">
@@ -35999,7 +35997,7 @@ To Constant</P>
     <P Name="BackgroundColor">[0.901961, 0.901961, 1.000000]</P>
     <P Name="DropShadow">on</P>
     <P Name="AnnotationType">area_annotation</P>
-    <P Name="ZOrder">4879</P>
+    <P Name="ZOrder">4885</P>
     <P Name="FontSize">12</P>
   </Annotation>
   <Annotation SID="13609">
@@ -36012,7 +36010,7 @@ To Constant</P>
     <P Name="BackgroundColor">[0.901961, 0.901961, 1.000000]</P>
     <P Name="DropShadow">on</P>
     <P Name="AnnotationType">area_annotation</P>
-    <P Name="ZOrder">4874</P>
+    <P Name="ZOrder">4880</P>
     <P Name="FontSize">12</P>
   </Annotation>
   <Annotation SID="3523">
@@ -36025,7 +36023,7 @@ To Constant</P>
     <P Name="BackgroundColor">[0.901961, 0.901961, 1.000000]</P>
     <P Name="DropShadow">on</P>
     <P Name="AnnotationType">area_annotation</P>
-    <P Name="ZOrder">4877</P>
+    <P Name="ZOrder">4883</P>
     <P Name="FontSize">12</P>
   </Annotation>
   <Annotation SID="3360">
@@ -36038,7 +36036,7 @@ To Constant</P>
     <P Name="BackgroundColor">[0.901961, 0.901961, 1.000000]</P>
     <P Name="DropShadow">on</P>
     <P Name="AnnotationType">area_annotation</P>
-    <P Name="ZOrder">4875</P>
+    <P Name="ZOrder">4881</P>
     <P Name="FontName">Arial</P>
     <P Name="FontSize">14</P>
   </Annotation>
@@ -38311,7 +38309,6 @@ To Zero</P>
   <Block BlockType="Constant" Name="TP_lim_gain" SID="13421">
     <P Name="Position">[-120, 345, -90, 375]</P>
     <P Name="ZOrder">77468</P>
-    <P Name="Value">20</P>
     <P Name="SampleTime">-1</P>
     <PortProperties>
       <Port Type="out" Index="1">
@@ -43982,10 +43979,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">mode</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">22049</P>
     <P Name="Labels">[0, 0]</P>
     <P Name="Src">13641#out:1</P>
@@ -44402,10 +44395,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">det_kappa</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">8623</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">8172#out:9</P>
@@ -44443,10 +44432,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">det_mindist</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">8630</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">8172#out:10</P>
@@ -44861,10 +44846,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">1</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">12097</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">8776#out:1</P>
@@ -44872,10 +44853,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">2</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">12096</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">8777#out:1</P>
@@ -44883,10 +44860,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">3</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">12095</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">8778#out:1</P>
@@ -44894,10 +44867,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">4</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">12094</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">8779#out:1</P>
@@ -44905,10 +44874,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">5</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">12093</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">8782#out:1</P>
@@ -44916,10 +44881,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">6</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">12092</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">8783#out:1</P>
@@ -44927,10 +44888,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">7</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">12091</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">8784#out:1</P>
@@ -44938,10 +44895,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">7</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">12117</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">8807#out:1</P>
@@ -44949,10 +44902,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">6</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">12114</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">8805#out:1</P>
@@ -44960,10 +44909,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">5</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">12115</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">8804#out:1</P>
@@ -44971,10 +44916,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">4</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">12116</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">8806#out:1</P>
@@ -44982,10 +44923,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">3</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">12113</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">8803#out:1</P>
@@ -44993,10 +44930,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">2</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">12112</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">8802#out:1</P>
@@ -45004,10 +44937,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">1</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">12104</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">8796#out:1</P>
@@ -45021,10 +44950,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">8</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">12118</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">8808#out:1</P>
@@ -45032,10 +44957,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">9</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">12120</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">8812#out:1</P>
@@ -45043,10 +44964,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">10</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">12121</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">8813#out:1</P>
@@ -45054,10 +44971,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">11</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">12122</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">8811#out:1</P>
@@ -45065,10 +44978,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">12</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">12123</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">8810#out:1</P>
@@ -45076,10 +44985,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">13</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">12124</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">8809#out:1</P>
@@ -45087,10 +44992,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">14</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">12125</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">8814#out:1</P>
@@ -45104,10 +45005,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">1</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">12152</P>
     <P Name="Labels">[2, 1]</P>
     <P Name="Src">8825#out:1</P>
@@ -45116,10 +45013,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">2</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">12153</P>
     <P Name="Labels">[2, 1]</P>
     <P Name="Src">8819#out:1</P>
@@ -45128,10 +45021,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">3</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">12154</P>
     <P Name="Labels">[2, 1]</P>
     <P Name="Src">8818#out:1</P>
@@ -45140,10 +45029,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">4</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">12155</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">8817#out:1</P>
@@ -45152,10 +45037,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">5</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">12156</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">8828#out:1</P>
@@ -45164,10 +45045,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">6</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">12157</P>
     <P Name="Labels">[2, 1]</P>
     <P Name="Src">8822#out:1</P>
@@ -45176,10 +45053,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">7</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">12158</P>
     <P Name="Labels">[2, 1]</P>
     <P Name="Src">8829#out:1</P>
@@ -45188,10 +45061,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">8</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">12159</P>
     <P Name="Labels">[2, 1]</P>
     <P Name="Src">8823#out:1</P>
@@ -45200,10 +45069,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">9</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">12160</P>
     <P Name="Labels">[2, 1]</P>
     <P Name="Src">8827#out:1</P>
@@ -45212,10 +45077,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">10</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">12161</P>
     <P Name="Labels">[2, 1]</P>
     <P Name="Src">8821#out:1</P>
@@ -45495,10 +45356,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">11</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">13155</P>
     <P Name="Labels">[0, 0]</P>
     <P Name="Src">9162#out:1</P>
@@ -45507,10 +45364,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">12</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">13156</P>
     <P Name="Labels">[0, 0]</P>
     <P Name="Src">9161#out:1</P>
@@ -45911,10 +45764,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">8</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">20572</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">13296#out:1</P>
@@ -45937,10 +45786,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">15</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">20578</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">13330#out:1</P>
@@ -45948,10 +45793,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">16</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">20580</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">13329#out:1</P>
@@ -45959,10 +45800,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">13</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">20600</P>
     <P Name="Labels">[0, 0]</P>
     <P Name="Src">13331#out:1</P>
@@ -45971,10 +45808,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">14</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">20601</P>
     <P Name="Labels">[0, 0]</P>
     <P Name="Src">13333#out:1</P>
@@ -45992,10 +45825,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">16</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">20609</P>
     <P Name="Labels">[0, 0]</P>
     <P Name="Src">13384#out:1</P>
@@ -46003,10 +45832,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">17</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">20610</P>
     <P Name="Labels">[0, 0]</P>
     <P Name="Src">13385#out:1</P>
@@ -46014,10 +45839,6 @@ Detector</P>
   </Line>
   <Line>
     <P Name="Name">15</P>
-    <P Name="FontName">Helvetica</P>
-    <P Name="FontSize">9</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="ZOrder">20608</P>
     <P Name="Labels">[0, 0]</P>
     <P Name="Src">13386#out:1</P>
@@ -46181,10 +46002,7 @@ Detector</P>
     <P Name="DropShadow">on</P>
     <P Name="AnnotationType">area_annotation</P>
     <P Name="ZOrder">28274</P>
-    <P Name="FontName">Helvetica</P>
     <P Name="FontSize">12</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
   </Annotation>
   <Annotation SID="7563">
     <P Name="Name">Berechnung der Steifigkeits- und Dämpfungsparameter für den kartesischen Impedanzregler</P>
@@ -46302,7 +46120,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_4619.xml
     <PortCounts in="9" out="9"/>
     <P Name="Position">[415, 2039, 620, 2391]</P>
     <P Name="ZOrder">100000</P>
-    <P Name="LibraryVersion">8.107</P>
+    <P Name="LibraryVersion">8.108</P>
     <P Name="SourceBlock">Cust_Library_planarPKM/Calculate_dynamics_terms</P>
     <P Name="SourceType">Function for determining the dynamic terms</P>
     <InstanceData>
@@ -47409,7 +47227,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_535.xml
     <PortCounts in="2" out="1"/>
     <P Name="Position">[145, 184, 265, 266]</P>
     <P Name="ZOrder">76151</P>
-    <P Name="LibraryVersion">8.107</P>
+    <P Name="LibraryVersion">8.108</P>
     <P Name="SourceBlock">Cust_Library_planarPKM/Controlword_Generator</P>
     <P Name="SourceType"/>
     <InstanceData>
@@ -47430,7 +47248,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_535.xml
     <PortCounts in="2" out="1"/>
     <P Name="Position">[130, 309, 250, 391]</P>
     <P Name="ZOrder">76152</P>
-    <P Name="LibraryVersion">8.107</P>
+    <P Name="LibraryVersion">8.108</P>
     <P Name="SourceBlock">Cust_Library_planarPKM/Controlword_Generator</P>
     <P Name="SourceType"/>
     <InstanceData>
@@ -47451,7 +47269,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_535.xml
     <PortCounts in="2" out="1"/>
     <P Name="Position">[120, 434, 240, 516]</P>
     <P Name="ZOrder">76153</P>
-    <P Name="LibraryVersion">8.107</P>
+    <P Name="LibraryVersion">8.108</P>
     <P Name="SourceBlock">Cust_Library_planarPKM/Controlword_Generator</P>
     <P Name="SourceType"/>
     <InstanceData>
@@ -47472,7 +47290,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_535.xml
     <PortCounts in="2" out="1"/>
     <P Name="Position">[105, 596, 250, 689]</P>
     <P Name="ZOrder">100000</P>
-    <P Name="LibraryVersion">8.107</P>
+    <P Name="LibraryVersion">8.108</P>
     <P Name="SourceBlock">Cust_Library_planarPKM/Controlword_Generator_Translat_Drive</P>
     <P Name="SourceType">Controlword generator for transl. drive</P>
     <InstanceData>
@@ -49094,7 +48912,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_5973.xml
     <PortCounts in="4" out="5"/>
     <P Name="Position">[-860, 776, -680, 924]</P>
     <P Name="ZOrder">100000</P>
-    <P Name="LibraryVersion">8.107</P>
+    <P Name="LibraryVersion">8.108</P>
     <P Name="SourceBlock">Cust_Library_planarPKM/Calculate geometric features regarding line of action</P>
     <P Name="SourceType">Calculate geometric features regarding line of action</P>
     <InstanceData>
@@ -49130,7 +48948,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_5973.xml
     <PortCounts in="4" out="6"/>
     <P Name="Position">[465, 797, 710, 898]</P>
     <P Name="ZOrder">100000</P>
-    <P Name="LibraryVersion">8.107</P>
+    <P Name="LibraryVersion">8.108</P>
     <P Name="SourceBlock">Cust_Library_planarPKM/Classify contact type and clamping chain</P>
     <P Name="SourceType">Classify contact type and clamping chain</P>
     <InstanceData>
@@ -49203,7 +49021,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_5973.xml
     <PortCounts in="2" out="2"/>
     <P Name="Position">[-835, 243, -710, 312]</P>
     <P Name="ZOrder">100000</P>
-    <P Name="LibraryVersion">8.107</P>
+    <P Name="LibraryVersion">8.108</P>
     <P Name="SourceBlock">Cust_Library_planarPKM/Detection</P>
     <P Name="SourceType">Function for determining whether a maximum permissible force, moment or torque value has been exceeded </P>
     <InstanceData>
@@ -50676,7 +50494,7 @@ Detector</P>
     <PortCounts in="5" out="4"/>
     <P Name="Position">[-275, 772, -140, 908]</P>
     <P Name="ZOrder">100000</P>
-    <P Name="LibraryVersion">8.107</P>
+    <P Name="LibraryVersion">8.108</P>
     <P Name="SourceBlock">Cust_Library_planarPKM/Localize collided body</P>
     <P Name="SourceType">Function for contact body classification with decision tree and fnn</P>
     <InstanceData>
@@ -50710,7 +50528,7 @@ Detector</P>
     <PortCounts in="10" out="4"/>
     <P Name="Position">[-820, 1153, -730, 1502]</P>
     <P Name="ZOrder">100000</P>
-    <P Name="LibraryVersion">8.107</P>
+    <P Name="LibraryVersion">8.108</P>
     <P Name="SourceBlock">Cust_Library_planarPKM/Localize contact point on second link via particle filter</P>
     <P Name="SourceType">Localize contact point on second link via particle filter</P>
     <InstanceData>
@@ -50881,7 +50699,7 @@ Detector</P>
     <PortCounts in="6" out="2"/>
     <P Name="Position">[-500, -89, -320, 99]</P>
     <P Name="ZOrder">100000</P>
-    <P Name="LibraryVersion">8.107</P>
+    <P Name="LibraryVersion">8.108</P>
     <P Name="SourceBlock">Cust_Library_planarPKM/Momentum Observer</P>
     <P Name="SourceType"/>
     <InstanceData>
@@ -53470,7 +53288,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_6495.xml
     <P Name="Position">[960, -169, 1045, -21]</P>
     <P Name="ZOrder">100000</P>
     <P Name="Commented">on</P>
-    <P Name="LibraryVersion">8.107</P>
+    <P Name="LibraryVersion">8.108</P>
     <P Name="SourceBlock">Cust_Library_planarPKM/Forward dynamics (flexible)</P>
     <P Name="SourceType">Forward dynamics with MuJoCo</P>
     <InstanceData>
@@ -61289,7 +61107,7 @@ end</Callback>
     <P Name="BackgroundColor">[0.901961, 0.901961, 1.000000]</P>
     <P Name="DropShadow">on</P>
     <P Name="AnnotationType">area_annotation</P>
-    <P Name="ZOrder">829</P>
+    <P Name="ZOrder">830</P>
     <P Name="FontSize">12</P>
   </Annotation>
 </System>
@@ -71409,10 +71227,10 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="IsTabbed" Class="logical">1</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
           <P Name="LoadSaveID" Class="char">5506</P>
-          <P Name="Extents" Class="double">[1675.0, 873.0]</P>
+          <P Name="Extents" Class="double">[1675.0, 1161.0]</P>
           <P Name="ZoomFactor" Class="double">1.5</P>
-          <P Name="Offset" Class="double">[-212.11917583381879, -32.564788736944934]</P>
-          <P Name="SceneRectInView" Class="double">[-212.11917583381879, -32.564788736944934, 893.33333333333337, 465.6]</P>
+          <P Name="Offset" Class="double">[-212.11917583381879, -109.36478873694489]</P>
+          <P Name="SceneRectInView" Class="double">[-212.11917583381879, -109.36478873694489, 893.33333333333337, 619.2]</P>
         </Object>
         <Object ObjectID="7">
           <P Name="IsActive" Class="logical">0</P>
@@ -71421,8 +71239,8 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="LoadSaveID" Class="char">3282</P>
           <P Name="Extents" Class="double">[1675.0, 1161.0]</P>
           <P Name="ZoomFactor" Class="double">0.57504057635545569</P>
-          <P Name="Offset" Class="double">[-130.56485804115869, -322.5762591974667]</P>
-          <P Name="SceneRectInView" Class="double">[-130.56485804115869, -322.5762591974667, 2330.2703410823169, 1615.1903677591463]</P>
+          <P Name="Offset" Class="double">[-130.56485804115891, -322.5762591974667]</P>
+          <P Name="SceneRectInView" Class="double">[-130.56485804115891, -322.5762591974667, 2330.2703410823169, 1615.1903677591463]</P>
         </Object>
         <Object ObjectID="8">
           <P Name="IsActive" Class="logical">0</P>
@@ -71451,8 +71269,8 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="LoadSaveID" Class="char">3043</P>
           <P Name="Extents" Class="double">[1675.0, 1161.0]</P>
           <P Name="ZoomFactor" Class="double">1.2146830132725759</P>
-          <P Name="Offset" Class="double">[-316.52564072027451, -324.82196789253049]</P>
-          <P Name="SceneRectInView" Class="double">[-316.52564072027451, -324.82196789253049, 1103.168468940549, 764.6439357850611]</P>
+          <P Name="Offset" Class="double">[-316.52564072027451, -324.82196789253044]</P>
+          <P Name="SceneRectInView" Class="double">[-316.52564072027451, -324.82196789253044, 1103.168468940549, 764.6439357850611]</P>
         </Object>
         <Object ObjectID="11">
           <P Name="IsActive" Class="logical">0</P>
@@ -71480,9 +71298,9 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
           <P Name="LoadSaveID" Class="char">4619</P>
           <P Name="Extents" Class="double">[1675.0, 1161.0]</P>
-          <P Name="ZoomFactor" Class="double">1.5</P>
-          <P Name="Offset" Class="double">[255.195730107231, 1889.9478650536148]</P>
-          <P Name="SceneRectInView" Class="double">[255.195730107231, 1889.9478650536148, 893.33333333333337, 619.2]</P>
+          <P Name="ZoomFactor" Class="double">1.4999999999999998</P>
+          <P Name="Offset" Class="double">[255.19573010723093, 1889.9478650536148]</P>
+          <P Name="SceneRectInView" Class="double">[255.19573010723093, 1889.9478650536148, 893.33333333333348, 619.2]</P>
         </Object>
         <Object ObjectID="14">
           <P Name="IsActive" Class="logical">1</P>
@@ -71490,9 +71308,9 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="ViewObjType" Class="char">SimulinkTopLevel</P>
           <P Name="LoadSaveID" Class="char">0</P>
           <P Name="Extents" Class="double">[1675.0, 1161.0]</P>
-          <P Name="ZoomFactor" Class="double">2.2542955326460477</P>
-          <P Name="Offset" Class="double">[-791.71036585365857, 721.34258661124738]</P>
-          <P Name="SceneRectInView" Class="double">[-791.71036585365857, 721.34258661124738, 594.42073170731726, 412.01341463414644]</P>
+          <P Name="ZoomFactor" Class="double">2.2542955326460472</P>
+          <P Name="Offset" Class="double">[-791.71036585365857, 721.34258661124727]</P>
+          <P Name="SceneRectInView" Class="double">[-791.71036585365857, 721.34258661124727, 594.42073170731726, 412.0134146341465]</P>
         </Object>
         <Object ObjectID="15">
           <P Name="IsActive" Class="logical">0</P>
@@ -71581,8 +71399,8 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="LoadSaveID" Class="char">9581</P>
           <P Name="Extents" Class="double">[1675.0, 1161.0]</P>
           <P Name="ZoomFactor" Class="double">1.7499999999999991</P>
-          <P Name="Offset" Class="double">[-286.05044642857189, -260.37142857142862]</P>
-          <P Name="SceneRectInView" Class="double">[-286.05044642857189, -260.37142857142862, 765.714285714286, 530.74285714285736]</P>
+          <P Name="Offset" Class="double">[-286.05044642857195, -260.37142857142862]</P>
+          <P Name="SceneRectInView" Class="double">[-286.05044642857195, -260.37142857142862, 765.714285714286, 530.74285714285736]</P>
         </Object>
         <Object ObjectID="24">
           <P Name="IsActive" Class="logical">0</P>
@@ -71591,8 +71409,8 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="LoadSaveID" Class="char">5800</P>
           <P Name="Extents" Class="double">[1675.0, 1161.0]</P>
           <P Name="ZoomFactor" Class="double">1.7499999999999991</P>
-          <P Name="Offset" Class="double">[-286.05044642857189, -260.37142857142862]</P>
-          <P Name="SceneRectInView" Class="double">[-286.05044642857189, -260.37142857142862, 765.714285714286, 530.74285714285736]</P>
+          <P Name="Offset" Class="double">[-286.05044642857195, -260.37142857142862]</P>
+          <P Name="SceneRectInView" Class="double">[-286.05044642857195, -260.37142857142862, 765.714285714286, 530.74285714285736]</P>
         </Object>
         <Object ObjectID="25">
           <P Name="IsActive" Class="logical">0</P>
@@ -71611,8 +71429,8 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="LoadSaveID" Class="char">8523</P>
           <P Name="Extents" Class="double">[1675.0, 1161.0]</P>
           <P Name="ZoomFactor" Class="double">1.7500000000000002</P>
-          <P Name="Offset" Class="double">[-233.02857142857147, -202.57142857142853]</P>
-          <P Name="SceneRectInView" Class="double">[-233.02857142857147, -202.57142857142853, 765.71428571428555, 530.742857142857]</P>
+          <P Name="Offset" Class="double">[-233.02857142857152, -202.57142857142853]</P>
+          <P Name="SceneRectInView" Class="double">[-233.02857142857152, -202.57142857142853, 765.71428571428555, 530.742857142857]</P>
         </Object>
         <Object ObjectID="27">
           <P Name="IsActive" Class="logical">0</P>
@@ -72472,7 +72290,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Minimized" Class="char">Unset</P>
         </Object>
       </Array>
-      <P Name="WindowState" Class="char">AAAA/wAAAAD9AAAAAwAAAAAAAAD+AAAEofwCAAAABPsAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAAAAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAlwAABKEAAAB5AP////sAAABgAFMAaQBtAHUAbABpAG4AawA6AEUAZABpAHQAbwByADoAUgBlAGYAZQByAGUAbgBjAGUAZABGAGkAbABlAHMALwBSAGUAZgBlAHIAZQBuAGMAZQBkACAARgBpAGwAZQBzAAAAAAD/////AAAApwD///8AAAABAAABfwAABND8AgAAAAH8AAAAlwAABNAAAAAAAP////r/////AgAAAAH7AAAAVABHAEwAVQBFADIAOgBQAHIAbwBwAGUAcgB0AHkASQBuAHMAcABlAGMAdABvAHIALwBQAHIAbwBwAGUAcgB0AHkAIABJAG4AcwBwAGUAYwB0AG8AcgAAAAAA/////wAAAhYA////AAAAAwAABrgAAAEb/AEAAAAE/AAAAAAAAAa4AAAAAAD////6/////wEAAAAA/AAAAAAAAAa4AAAAAAD////6/////wEAAAAA/AAAAAAAAAa4AAAAAAD////6/////wEAAAAA+/////8AAAAAAAAABrgAAAMWAP///wAABrgAAATQAAAAAQAAAAIAAAABAAAAAvwAAAAEAAAAAAAAAAAAAAABAAAAAAAAAAIAAAAAAAAAAwAAAAA=</P>
+      <P Name="WindowState" Class="char">AAAA/wAAAAD9AAAAAwAAAAAAAAD+AAAEofwCAAAABPsAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAAAAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAlwAABKEAAAB5AP////sAAABgAFMAaQBtAHUAbABpAG4AawA6AEUAZABpAHQAbwByADoAUgBlAGYAZQByAGUAbgBjAGUAZABGAGkAbABlAHMALwBSAGUAZgBlAHIAZQBuAGMAZQBkACAARgBpAGwAZQBzAAAAAAD/////AAAApwD///8AAAABAAABfwAABND8AgAAAAH8AAAAlwAABNAAAAAAAP////r/////AgAAAAH7AAAAVABHAEwAVQBFADIAOgBQAHIAbwBwAGUAcgB0AHkASQBuAHMAcABlAGMAdABvAHIALwBQAHIAbwBwAGUAcgB0AHkAIABJAG4AcwBwAGUAYwB0AG8AcgAAAAAA/////wAAAhYA////AAAAAwAABrgAAAEb/AEAAAAE/AAAAAAAAAa4AAAAAAD////6/////wEAAAAA/AAAAAAAAAa4AAAAAAD////6/////wEAAAAA/AAAAAAAAAa4AAAAAAD////6/////wEAAAAA+/////8AAAAAAP////8AAAMWAP///wAABrgAAATQAAAAAQAAAAIAAAABAAAAAvwAAAAEAAAAAAAAAAAAAAABAAAAAAAAAAIAAAAAAAAAAwAAAAA=</P>
       <Array PropName="PersistedApps" Type="Cell" Dimension="0*1"/>
       <P Name="WindowUuid" Class="char">cd1f9c5f-c893-4912-b40a-eb86b871b93c</P>
     </Object>

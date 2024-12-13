@@ -17,6 +17,8 @@ addpath(fullfile(this_path, 'ros_rt_interface'));
 if exist(fullfile(this_path, 'ros_rt_interface', 'build'), 'dir')~=0
     run(fullfile(this_path, 'ros_rt_interface', 'pcu_ros_load_buses.m')); % Load bus definitions for Simulink
     addpath(fullfile(this_path, 'ros_rt_interface', 'build'));
+else
+    addpath('C:\Users\mohammad_admin\seadrive_root\aran.moh\Für mich freigegeben\imes-projekt-dfg_mrkpkm\03_Entwicklung\10_3RRR\10_Messdaten\Messdaten');    
 end
 %% Setting kinematic and dynamic parameters
 % Selection of dynamic and safety parameters for real-world test bench
@@ -24,7 +26,7 @@ param.Exp = 0;
 % Selection of simulation with capsule for contact experiments
 param.capsule_active = 1;
 % Sampling time in s
-param.t_sample=0.001; 
+param.t_sample=0.01; 
 % Thresholds for contact detection, leads to the controller being switched off
 param.CollDet_limit_MobPlat = [40;40;2]*1.5;
 % Thresholds for soft contact detection, leads to reaction
