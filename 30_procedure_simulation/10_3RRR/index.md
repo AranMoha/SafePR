@@ -9,15 +9,10 @@ nav_order: 3
 </p>
 
 # Planar Parallel Robot
-
-Bedienung der planaren PKM in der MuJoCo-Simulation und des realen Versuchsstands.
-Wenn ein Punkt hier fehlt/falsch ist, dann bitte eine Mail an die untenstehende Adresse.
-Aran Mohammad, aran.mohammad@imes.uni-hannover.de
+Using the planar parallel robot in the MuJoCo simulation
 
 ## Repostruktur
-
-Das Repo gliedert sich wie folgt:
-
+The repo is structured as follows:
 - `GeomagicTouch`:  Software für die Einbindung des GeomagicTouch
 - `Koordinatensysteme`:  Koordinatensysteme jedes Freiheitsgrads der PKM als Matlab-Figures
 - `MuJoCo`:  Dynamiksimulation mit Animation in MuJoCo
