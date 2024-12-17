@@ -5,7 +5,7 @@ has_children: true
 nav_order: 3
 ---
 <p align="center">
-<img src="images/planarPR.png" width=500>
+<img src="../../images/planarPR.png" width=500>
 </p>
 
 # Planar Parallel Robot
