@@ -5,5 +5,4 @@ nav_order: 2
 ---
 
 # Simulation
-
-text
+Below are links to the Simulink models of various parallel robots, which will be extended by further kinematics in the future.

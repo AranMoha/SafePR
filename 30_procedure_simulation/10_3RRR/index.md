@@ -1,11 +1,14 @@
 ---
-title: 3RRR Parallel Robot
+title: Planar Parallel Robot
 parent: Simulation
 has_children: true
 nav_order: 3
 ---
+<p align="center">
+<img src="images/planarPR.png" width=500>
+</p>
 
-# 3RRR Parallel Robot
+# Planar Parallel Robot
 
 Bedienung der planaren PKM in der MuJoCo-Simulation und des realen Versuchsstands.
 Wenn ein Punkt hier fehlt/falsch ist, dann bitte eine Mail an die untenstehende Adresse.
