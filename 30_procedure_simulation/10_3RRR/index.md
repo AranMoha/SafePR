@@ -10,7 +10,7 @@ nav_order: 3
 
 # Planar Parallel Robot
 ## Structure
-The repository of the planar parallel robot is structured as follows
+The [repository](https://github.com/AranMoha/SafePR/tree/main/30_procedure_simulation/10_3RRR) of the planar parallel robot is structured as follows
 - `catkin_ws`: ROS workspace
 - `ros_rt_interface`: Real-time interface (in the Simulink model)
 - `PR_Planar_Controlpanel.mlapp`: Graphical user interface to parameterize the simulink model
