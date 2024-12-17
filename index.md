@@ -3,7 +3,7 @@ title: Overview
 nav_order: 1
 ---
 <p align="center">
-<img src="images/safepr_cover.png" width=500>
+<img src="images/10_safepr_cover.png" width=500>
 </p>
 
 # Welcome to the documentation of SafePR!
@@ -22,7 +22,7 @@ The corresponding code can be found and described here to give other researchers
 Secondly, the **commissioning of custom-built robot systems** is very complex and many works already use commercially available systems that do not (or cannot) always allow full access to real-time signals such as joint torques. For these reasons, the complete **Simulink model of the SafePR algorithm** can also be found here.
 This includes not only the algorithmic integration of the contact detection and reaction methods, but also the implementation of the logic to control a mechatronic system in a robust and repeatable manner.
 
-**In the left column**, further information can be found regarding the Simulink model for the simulation as well as the execution of experiments on the test bench. 
+**In the left column**, further information can be found regarding the Simulink model for the simulation as well as the execution of experiments on the test bench.
 In addition, the core ideas of the individual steps of SafePR are described.
 
 ## Video

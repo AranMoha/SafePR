@@ -5,7 +5,7 @@ has_children: true
 nav_order: 3
 ---
 <p align="center">
-<img src="../../images/planarPR.png" width=500>
+<img src="../../images/20_planarPR.png" width=500>
 </p>
 
 # Planar Parallel Robot
@@ -26,6 +26,29 @@ The [repository](https://github.com/AranMoha/SafePR/tree/main/30_procedure_simul
   - `Trajectories`: Trajectory files
   - `mujoco_stl_xml_files`: STL files for MuJoCo
   - `simulink_custLib`: Simulink libraries
+
+## Simulink model
+This section provides an understanding of the Simulink model, which is used to operate the planar PR. The individual subsystems are described.
+<p align="center">
+<img src="../../images/30_flowchart.png" width=700>
+</p>
+The figure shows the principle procedure and signal flow diagram of the test bench. Target poses are specified via a GUI, after which an acceleration-trapezoidal profile is planned. The target poses, velocities and accelerations are demanded incrementally by 1kHz. The detection, classification, localization, identification and reaction are also shown.
+
+### Control panel
+The control panel (GUI) makes it possible to change parameters in the Simulink model at runtime. Since the model must be compiled before it is executed, the workspace is already predefined at program start and can no longer be changed. However, it is possible to subsequently change the memory allocated for individual parameters during compilation using the GUI. This means that only values can be changed at runtime, but not added.
+### Init_Block
+The **Init_Block** subsystem contains a separate state machine for each motor. This is designed to ensure that the motors run through a predefined initialization protocol when they are switched on. If the *start_int* (enable drive from control panel) gets true (“Motor on/off” command set by the user), the initial state is exited. From now on, the real-time computer and servo controller exchange *statusword* and *controlword* in order to ultimately keep the motor switched on and ready for operation in the final state. Running through this state machine only takes a few cycles. If an error occurs, the *start_int* value is set to false and the motor switches off.
+
+### Kinematics
+In this subsystem, the measured variables of the active and passive joints for platform pose and speed are calculated. The end effector pose, velocity and acceleration are calculated here using the robot's direct and differential kinematics. The angles and velocities of the passive joints are also calculated.
+
+### Logic
+This subsystem is responsible for the entire logic. The trajectory planning for a point-to-point movement is calculated here and the trajectory files are also loaded. The output of this subsystem is the target pose, speed, acceleration in joint- and operational-space coordinates for reaction movements, as well as  parameters of the underlying state machine.
+
+### Dynamics
+### Observer
+### Control
+
 
 ## Operating the simulation
 1. Execute the script `PR_Planar_Testbench_2018_Init.m`. The MuJoCo animation of the PR should appear
