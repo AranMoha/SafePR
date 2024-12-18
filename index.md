@@ -46,3 +46,6 @@ DOI: TBD
 
 ## Authors
 SafePR is part of the PhD thesis of [Aran Mohammad](https://www.imes.uni-hannover.de/en/institute/team/m-sc-aran-mohammad) (Email: <aran.mohammad@imes.uni-hannover.de>) and was developed with support from colleagues (Moritz Schappler, Tim-Lukas Habich, Jan Piosik, Thomas Seel).
+
+## Acknowledgment
+The authors acknowledge the support of the German Research Foundation~(DFG) under grant number 444769341.
