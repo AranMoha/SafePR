@@ -1,0 +1,233 @@
+<mujoco model="PKM 3RRR with Human"> # XML file is thus recognized as an MJCF file
+
+  ############################## Simulation setting ##############################
+  <option timestep="0.001" iterations="150" apirate="1000" gravity="0 0 -9.81" solver="Newton" tolerance="1e-10" cone="elliptic"/>
+
+  ############################## Assets are referenced in the model to use meshes from STL files ##############################
+  <asset>
+    <texture type="skybox" builtin="gradient" rgb1=".3 .5 .7" rgb2="1 1 1" width="512" height="512"/> # Background in the animation is set
+    <mesh name="table" 	file="table.stl"/>
+    <mesh name="motor" 	file="motor.stl"/>
+    <mesh name="active_joint" 	file="shoulder.stl"/>
+    <mesh name="upper_arm" 	file="upper_arm.stl"/>
+    <mesh name="passive_joint_1" 	file="passive_joint_1.stl"/>
+    <mesh name="passive_joint_2" 	file="passive_joint_2.stl"/>
+    <mesh name="lower_arm" 	file="lower_arm.stl"/>
+    <mesh name="endeffector" 	file="endeffector.stl"/>
+    <texture name="texclogo" type="2d" file="LOGO_imes_luh.png"/>
+    <material name="matlogo" texture="texclogo"/>
+  </asset>
+
+  ############################## Class definition ##############################
+  <default>
+    <geom solref="0.1 1"/> # timestep und damping ratio
+    <!-- <geom solimp="0.9 0.95 0.001 0.5 2"/> -->
+
+    <default class="hinge_passiv">
+        <joint type="hinge" pos="0 0 0" axis="0 0 1" limited="false" range="-720 720" stiffness="0" damping="0" frictionloss="0" />
+    </default>
+
+    <default class="hinge_active">
+        <joint type="hinge" pos="0 0 0" axis="0 0 1" limited="true" range="-100 150" stiffness="0" damping="1" frictionloss="0" />
+    </default>
+
+    <default class="table">
+        <geom type="mesh" rgba="0.9 .9 .9 1" mesh="table"/>
+    </default>
+
+    <default class="motor">
+        <geom type="mesh" mass = "0.0001" rgba="0.8 .8 .8 1" mesh="motor"/>
+    </default>
+
+    <default class="active_joint">
+        <geom type="mesh" mass = "0.0001" rgba=".91 .48 .16 1" mesh="active_joint"/>
+    </default>
+
+    <default class="upper_arm">
+        <geom type="mesh" mass = "2.272" rgba=".91 .48 .16 1" mesh="upper_arm"/>
+    </default>
+
+    <default class="passive_joint_1">
+        <geom type="mesh" mass = "0.0001" rgba="0.7 .7 .7 1" mesh="passive_joint_1"/>
+    </default>
+
+    <default class="lower_arm">
+        <geom type="mesh" mass = "0.75" rgba="0 .31 .61 1" mesh="lower_arm"/>
+    </default>
+
+    <default class="passive_joint_2">
+        <geom type="mesh" mass = "0.0001" rgba="0.7 .7 .7 1" mesh="passive_joint_2"/>
+    </default>
+
+    <default class="endeffector">
+        <geom type="mesh" mass = "0.75" rgba="0.2 0.2 .2 1" mesh="endeffector"/>
+    </default>
+  </default>
+
+ ############################## Model creation ##############################
+ <worldbody>
+  <geom name="g0_table" class="table" pos="-0.05 -0.125 0" euler="0 0 330" rgba=".49 .49 .49 0.29"/>
+  <geom name="g1_ground" type="box" size="0.9 0.8 0.28" pos="-0.05 -0.125 -0.3" euler="0 0 330" rgba=".49 .49 .49 0.29"/>
+  <geom name="g2_logo" type="box" material="matlogo" size="0.276 0.148 0.001" pos="-0.95 -0.2 0.01" euler="0 0 240" />
+  <light diffuse=".5 .5 .5" pos="0 0 3" dir="0 0 -1"/>
+
+
+
+  ###### Chain 1 ######
+    # Motor housing
+    <body name= "b1_base_C1" pos="0.6877 0 0" euler="0 0 90">
+    <geom name="g4_base1" class="motor" pos="0 0 0" euler="0 0 150"/>
+    <inertial pos="0 0 0" mass="0.0" diaginertia="0.0 0.0 0.0"/>
+      # Active joint
+      <body name= "b2_C1aJ" pos="0 0 0.4" euler="0 0 25.5184">
+      <joint name="joint_qa1" class="hinge_active"/>
+      <geom name="g5_activeJoint1" class="active_joint" pos="0.0 0 -0.05" euler="0 0 0"/>
+      <inertial pos="0 0 0" mass="0.0" diaginertia="0.0 0.0 0.0"/>
+        # Upper arm
+        <body name="b3_C1L1" pos="0 0 0" euler="0 0 0">
+        <inertial  pos="0.29 0 0" mass="2.272" diaginertia="0.0640 0.0640 0.0640"/>
+        <geom name="g6_upperArm1_backside" type="box" size="0.005 0.025 0.025" pos="-0.05 0 0" rgba=".91 .48 .16 1"/>
+        <geom name="g7_upperArm1" class="upper_arm" pos="-0.045 0 0"/>
+        <geom name="g8_upperArm1_frontside" type="box" size="0.03 0.025 0.025" pos="0.585 0 0" rgba=".91 .48 .16 1"/>
+          # Passive joint 1 (elbow)
+          <body name="b4_C1J1" pos="0.585 0 -0.025" euler="0 0 122.3049">
+          <joint name="joint_passiveJoint_C1J1" class="hinge_passiv"/>
+          <inertial pos="0 0 0" mass="0.0" diaginertia="0.0 0.0 0.0"/>
+          <geom name="g9_passiveJoint_C1J1" class="passive_joint_1" pos="0 0 -0.012" rgba=".55 .55 .55 1" mass="0" group="1"/>
+            # Forearm
+            <body name="b5_C1L2" pos="0.0 0 -0.025" euler="0 0 0">
+            <inertial  pos="0.311 0 0" mass="0.75" diaginertia="0.0240 0.0240 0.0240"/>
+            <geom name="g10_lowerArm1_backside" type="box" size="0.015 0.015 0.015" pos="-0.015 0 0" rgba="0 .31 .61 1"/>
+            <geom name="g11_lowerArm1" class="lower_arm" pos="0 0 0"/>
+            <geom name="g12_lowerArm1_frontside" type="box" size="0.015 0.015 0.015" pos="0.61 0 0" rgba="0 .31 .61 1"/>
+              # Passive joint 2
+              <body name="b6_C1J2" pos="0.62 0 0" euler="0 0 -237.8233">
+              <joint name="joint_passiveJoint_C1J2" class="hinge_passiv"/>
+              <geom name="g13_passiveJoint_C1J2" class="passive_joint_2" pos="0 0 -0.02" rgba="0 .31 .61 1" mass="0" group="1"/>
+              <inertial  pos="0 0 0" mass="0.01" diaginertia="0.001 0.001 0.001"/>
+                # Mobile platform
+                <body name="b7_mobPl" pos="-0.107 0 -0.025" euler="0 0 0">
+                <geom name="g14_mobilePlatform_connector1" type="box" size="0.03 0.015 0.005" pos="0.085 0 0" rgba="0.2 0.2 .2 1"/>
+                <geom name="g15_mobilePlatform_connector2" type="box" size="0.03 0.015 0.005" pos="-0.0425 0.0736 0" euler="0 0 120" rgba="0.2 0.2 .2 1"/>
+                <geom name="g16_mobilePlatform_connector3" type="box" size="0.03 0.015 0.005" pos="-0.0425 -0.0736 0" euler="0 0 240" rgba="0.2 0.2 .2 1"/>
+                <geom name="g17_mobilePlatform" class="endeffector" pos="0 0 0"/>
+                <joint type="slide" name="joint_ee_x_transl" pos="0 0 0" axis="1 0 0" limited="false" stiffness="0" damping="0" frictionloss="0" />
+                <joint type="slide" name="joint_ee_y_transl" pos="0 0 0" axis="0 1 0" limited="false" stiffness="0" damping="0" frictionloss="0" />
+                <joint type="hinge" name="joint_ee_z_rot" pos="0 0 0" axis="0 0 1" limited="false" range="-360 360" stiffness="0" damping="0" frictionloss="0" />
+                <inertial  pos="0 0 0" mass="0.642" diaginertia="0.0037 0.0037 0.0037"/>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+
+    </body>
+
+  ###### Chain 2 ######
+    # Motor housing
+    <body name= "b8_base_C2" pos="-0.3541 0.5948 0" euler="0 0 210.7631">
+    <geom name="g18_base2" class="motor" pos="0 0 0" euler="0 0 30"/>
+    <inertial pos="0 0 0" mass="0.0" diaginertia="0.0 0.0 0.0"/>
+      # Active joint
+      <body name= "b9_C2aJ" pos="0 0 0.4" euler="0 0 25.9632">
+      <joint name="joint_qa2" class="hinge_active"/>
+      <geom name="g19_activeJoint2" class="active_joint" pos="0.0 0 -0.05" euler="0 0 0"/>
+      <inertial pos="0 0 0" mass="0.0" diaginertia="0.0 0.0 0.0"/>
+        # Upper arm
+        <body name="b10_C2L1" pos="0 0 0" euler="0 0 0">
+        <inertial  pos="0.29 0 0" mass="2.272" diaginertia="0.0640 0.0640 0.0640"/>
+        <geom name="g20_upperArm2_backside" type="box" size="0.005 0.025 0.025" pos="-0.05 0 0" rgba=".91 .48 .16 1"/>
+        <geom name="g21_upperArm2" class="upper_arm" pos="-0.045 0 0"/>
+        <geom name="g22_upperArm2_frontside" type="box" size="0.03 0.025 0.025" pos="0.585 0 0" rgba=".91 .48 .16 1"/>
+          # Passive joint 1 (elbow)
+          <body name="b11_C2J1" pos="0.585 0 -0.025" euler="0 0 121.7747">
+          <joint name="joint_passiveJoint_C2J1" class="hinge_passiv"/>
+          <geom name="g23_passiveJoint_C2J1" class="passive_joint_1" pos="0 0 -0.012" rgba=".55 .55 .55 1" mass="0" group="1"/>
+          <inertial pos="0 0 0" mass="0.0" diaginertia="0.0 0.0 0.0"/>
+            # Forearm
+            <body name="b12_C1L2" pos="0.0 0 -0.025" euler="0 0 0">
+            <inertial  pos="0.311 0 0" mass="0.75" diaginertia="0.0240 0.0240 0.0240"/>
+            <geom name="g24_lowerArm2_backside" type="box" size="0.015 0.015 0.015" pos="-0.015 0 0" rgba="0 .31 .61 1"/>
+            <geom name="g25_lowerArm2" class="lower_arm" pos="0 0 0"/>
+            <geom name="g26_lowerArm2_frontside" type="box" size="0.015 0.015 0.015" pos="0.61 0 0" rgba="0 .31 .61 1"/>
+              # Passive joint 2
+              <body name="b13_C2J2" pos="0.62 0 0" euler="0 0 -358.5010">
+              <joint name="joint_passiveJoint_C2J2" class="hinge_passiv"/>
+              <geom name="g27_passiveJoint_C2J2" class="passive_joint_2" pos="0 0 -0.02" rgba="0 .31 .61 1" mass="0" group="1"/>
+              <inertial  pos="0 0 0" mass="0.01" diaginertia="0.001 0.001 0.001"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+
+  ###### Chain 3 ######
+    # Motor housing
+    <body name= "b14_base_C3" pos="-0.3283 -0.5801 0" euler="0 0 330.4901">
+    <geom name="g28_base3" class="motor" pos="0 0 0" euler="0 0 90"/>
+    <inertial pos="0 0 0" mass="0.0" diaginertia="0.0 0.0 0.0"/>
+      # Active joint
+      <body name= "b15_C3aJ" pos="0 0 0.4" euler="0 0 24.3787">
+      <joint name="joint_qa3" class="hinge_active"/>
+      <geom name="g29_activeJoint3" class="active_joint" pos="0.0 0 -0.05" euler="0 0 0"/>
+      <inertial pos="0 0 0" mass="0.0" diaginertia="0.0 0.0 0.0"/>
+        # Upper arm
+        <body name="b16_C3L1" pos="0 0 0" euler="0 0 0">
+        <inertial  pos="0.29 0 0" mass="2.272" diaginertia="0.0640 0.0640 0.0640"/>
+        <geom name="g30_upperArm3_backside" type="box" size="0.005 0.025 0.025" pos="-0.05 0 0" rgba=".91 .48 .16 1"/>
+        <geom name="g31_upperArm3" class="upper_arm" pos="-0.045 0 0"/>
+        <geom name="g32_upperArm3_frontside" type="box" size="0.03 0.025 0.025" pos="0.585 0 0" rgba=".91 .48 .16 1"/>
+          # Passive joint 1 (elbow)
+          <body  name="b17_C3J1" pos="0.585 0 -0.025" euler="0 0 124.6086">
+          <joint name="joint_passiveJoint_C3J1" class="hinge_passiv"/>
+          <geom name="g33_passiveJoint_C3J1" class="passive_joint_1" pos="0 0 -0.012" rgba=".55 .55 .55 1" mass="0" group="1"/>
+          <inertial pos="0 0 0" mass="0.0" diaginertia="0.0 0.0 0.0"/>
+            # Forearm
+            <body name="b18_C3L2" pos="0.0 0 -0.025" euler="0 0 0">
+            <inertial  pos="0.311 0 0" mass="0.75" diaginertia="0.0240 0.0240 0.0240"/>
+            <geom name="g34_lowerArm3_backside" type="box" size="0.015 0.015 0.015" pos="-0.015 0 0" rgba="0 .31 .61 1"/>
+            <geom name="g35_lowerArm3" class="lower_arm" pos="0 0 0"/>
+            <geom name="g36_lowerArm3_frontside" type="box" size="0.015 0.015 0.015" pos="0.61 0 0" rgba="0 .31 .61 1"/>
+              # Passive joint 2
+              <body name="b19_C3J2" pos="0.62 0 0" euler="0 0 -479.4775">
+              <joint name="joint_passiveJoint_C3J2" class="hinge_passiv"/>
+              <geom name="g37_passiveJoint_C3J2" class="passive_joint_2" pos="0 0 -0.02" rgba="0 .31 .61 1" mass="0" group="1"/>
+              <inertial  pos="0 0 0" mass="0.01" diaginertia="0.001 0.001 0.001"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+
+
+  </worldbody>
+
+ ############################## Kinematic constraints ##############################
+ # equality weld binds two bodies together by removing all DoFs between them
+ # Here the DoFs between the mobile platform and the platform coupling points are removed
+  <equality>
+      <weld name="equality_weld_base1"  active="true" body1="b7_mobPl" body2="b6_C1J2" relpose="0 1 0  0 0 0 0"/>
+      <weld name="equality_weld_base2"  active="true" body1="b7_mobPl" body2="b13_C2J2" relpose="0 1 0  0 0 0 0"/>
+      <weld name="equality_weld_base3"  active="true" body1="b7_mobPl" body2="b19_C3J2" relpose="0 1 0  0 0 0 0"/>
+  </equality>
+
+ ############################## Exclusion of trivial contacts ##############################
+  <contact>
+    <exclude name="exclude_active_joint1" body1="b2_C1aJ" body2="b1_base_C1"/>
+    <exclude name="exclude_active_joint2" body1="b9_C2aJ" body2="b8_base_C2"/>
+    <exclude name="exclude_active_joint3" body1="b15_C3aJ" body2="b14_base_C3"/>
+    <exclude name="exclude_cp2" body1="b13_C2J2" body2="b7_mobPl"/>
+    <exclude name="exclude_cp3" body1="b19_C3J2" body2="b7_mobPl"/>
+  </contact>
+
+ ############################## Actuator definition ##############################
+  <actuator>
+    <motor name="Tau_qa1" joint="joint_qa1"/>
+    <motor name="Tau_qa2" joint="joint_qa2"/>
+    <motor name="Tau_qa3" joint="joint_qa3"/>
+  </actuator>
+
+</mujoco>
