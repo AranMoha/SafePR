@@ -26,6 +26,10 @@ A feedforward neural network (FNN) for binary clamp and collision classification
 ## Video
 <iframe width="560" height="315" src="https://www.youtube.com/watch?v=HaazrQsKVhY&list=PL4CTZWpCaHQkNZIBynOHFW0PTDxjiGFT5&index=2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TMLpRXZHuLA?si=7h0NEn7rlYwk9cts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
 # Kinetostatic Analysis
 Now consider a platform collision.
 The disturbance observer estimates the external force and the moment occurring with a lever, which are used to determine the line of action.
