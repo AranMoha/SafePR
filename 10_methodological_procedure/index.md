@@ -50,6 +50,7 @@ Physically modeled features describing the position of the line of action of the
 Platform collisions are isolated and identified with an explicit solution, while a particle filter estimates the location and force of other contacts.
 
 ## Video
+
 <iframe width="560" height="315" src="https://youtu.be/xD6Zaj6p1f8?si=FLHMEpotQ-BkUukG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 # Reaction
@@ -60,6 +61,7 @@ The advantage of this reaction method is that it is independent of the contact l
 The retraction in the direction of the line of action takes place only via the translational platform coordinates and provides an immediate reaction.
 
 ## Video
+
 <iframe width="560" height="315" src="https://youtu.be/pcIBYYhcWk4?si=jempzsBbnGImf_7Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 # Redundancy Resolution
