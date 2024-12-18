@@ -27,10 +27,6 @@ A feedforward neural network (FNN) for binary clamp and collision classification
 
 <iframe width="560" height="315" src="https://youtube.com/embed/HaazrQsKVhY?si=8DpXQBM71zcANZ1v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/TMLpRXZHuLA?si=7h0NEn7rlYwk9cts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
 # Kinetostatic Analysis
 Now consider a platform collision.
 The disturbance observer estimates the external force and the moment occurring with a lever, which are used to determine the line of action.
@@ -51,7 +47,7 @@ Platform collisions are isolated and identified with an explicit solution, while
 
 ## Video
 
-<iframe width="560" height="315" src="https://youtu.be/xD6Zaj6p1f8?si=FLHMEpotQ-BkUukG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtube.com/embed/xD6Zaj6p1f8?si=FLHMEpotQ-BkUukG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 # Reaction
 Clamping reactions using a structural opening are performed based on the clamping gap between two segments of the previously classified affected leg chain by calculating the gradient of the clamping joint angle in relation to the rotational platform coordinates, which corresponds to the direction of rotation of the platform to the gap opening.
@@ -62,7 +58,7 @@ The retraction in the direction of the line of action takes place only via the t
 
 ## Video
 
-<iframe width="560" height="315" src="https://youtu.be/pcIBYYhcWk4?si=jempzsBbnGImf_7Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtube.com/embed/pcIBYYhcWk4?si=jempzsBbnGImf_7Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 # Redundancy Resolution
 However, there are limits to the robot, such as joint angle limits or passing through a singularity in the workspace.
