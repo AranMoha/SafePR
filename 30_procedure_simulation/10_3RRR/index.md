@@ -32,22 +32,42 @@ This section provides an understanding of the Simulink model, which is used to o
 <p align="center">
 <img src="../../images/30_flowchart.png" width=700>
 </p>
-The figure shows the principle procedure and signal flow diagram of the test bench. Target poses are specified via a GUI, after which an acceleration-trapezoidal profile is planned. The target poses, velocities and accelerations are demanded incrementally by 1kHz. The detection, classification, localization, identification and reaction are also shown.
+The figure shows the methodological procedure. Target poses are specified via a GUI, after which an acceleration-trapezoidal profile is planned. The target poses, velocities and accelerations are demanded incrementally by 1kHz. The detection, classification, localization, identification and reaction are also shown.
+<p align="center">
+<img src="../../images/41_simulink.png" width=450>
+</p>
+The figure shows the simulink model on the highest level to depict the signal flow diagram of the test bench.
 
-### Control panel
-The control panel (GUI) makes it possible to change parameters in the Simulink model at runtime. Since the model must be compiled before it is executed, the workspace is already predefined at program start and can no longer be changed. However, it is possible to subsequently change the memory allocated for individual parameters during compilation using the GUI. This means that only values can be changed at runtime, but not added.
-### Init_Block
-The **Init_Block** subsystem contains a separate state machine for each motor. This is designed to ensure that the motors run through a predefined initialization protocol when they are switched on. If the *start_int* (enable drive from control panel) gets true (“Motor on/off” command set by the user), the initial state is exited. From now on, the real-time computer and servo controller exchange *statusword* and *controlword* in order to ultimately keep the motor switched on and ready for operation in the final state. Running through this state machine only takes a few cycles. If an error occurs, the *start_int* value is set to false and the motor switches off.
-
-### Kinematics
-In this subsystem, the measured variables of the active and passive joints for platform pose and speed are calculated. The end effector pose, velocity and acceleration are calculated here using the robot's direct and differential kinematics. The angles and velocities of the passive joints are also calculated.
-
-### Logic
+- **Control panel**
+  - The control panel (GUI) makes it possible to change parameters in the Simulink model at runtime. Since the model must be compiled before it is executed, the workspace is already predefined at program start and can no longer be changed. However, it is possible to subsequently change the memory allocated for individual parameters during compilation using the GUI. This means that only values can be changed at runtime, but not added.
+-**Init_Block**
+  - The subsystem contains a separate state machine for each motor. This is designed to ensure that the motors run through a predefined initialization protocol when they are switched on. If the *start_int* (enable drive from control panel) gets true (“Motor on/off” command set by the user), the initial state is exited. From now on, the real-time computer and servo controller exchange *statusword* and *controlword* in order to ultimately keep the motor switched on and ready for operation in the final state. Running through this state machine only takes a few cycles. If an error occurs, the *start_int* value is set to false and the motor switches off.
+- **Kinematics**
+  - In this subsystem, the measured variables of the active and passive joints for platform pose and speed are calculated. The end effector pose, velocity and acceleration are calculated here using the robot's direct and differential kinematics. The angles and velocities of the passive joints are also calculated.
+- **Logic**
 This subsystem is responsible for the entire logic. The trajectory planning for a point-to-point movement is calculated here and the trajectory files are also loaded. The output of this subsystem is the target pose, speed, acceleration in joint- and operational-space coordinates for reaction movements, as well as  parameters of the underlying state machine.
-
-### Dynamics
-### Observer
-### Control
+  - *State machine*
+    - The state machine is controlled via user input in the GUI and can basically be divided into three branches for planned movements. The first strand controls the logic of a point-to-point movement with an acceleration trajectory profile, the second strand controls the logic of the movement to the home position and the third strand takes care of the correct execution of the trajectories. In principle, the course of the first and second strand is the same, which is why only the first and third are described in more detail below.
+    - Two further states are there to prevent errors through safety functions. The following points are addressed with the safety functions:
+      - Joint- and operational-space limits
+      - Singularities of type I, II and III
+      - Contact detection
+      - Self-collision
+      - NaN values from the generalized-momentum observer
+    - The final branch with three states are only active if a contact is detected and a reaction is enabled by the user.
+    - Another criterion checks the user input and is set by the state machine. If the user presses the *Terminate* button in the GUI during a movement execution and before the last target platform pose is reached, the target motor torques are zeroed and the motors are switched off.
+- **Dynamics**
+  - Here, the individual dynamic terms are calculated on the basis of the minimum dynamic parameters and the kinematic parameters. The dynamic terms from this system therefore describe the current actual state of the robot. The functions used in the model were first set up analytically using the symbolic calculation program Maple and then exported to Matlab code.
+- **Observer**
+  - This subsystem includes observers for estimating unmeasured variables such as external forces at the mobile platform.
+  - In addition, the entire process from detection to classification, localization and isolation is implemented here.
+- **Control**
+  - This section contains the Cartesian impedance control and the code for the nullspace projection. In addition, the commanded motor torques are checked for plausibility (inf or nan).
+- **Communication**
+  - This subsystem contains the interface blocks of the EtherLab library. The outputs of the blocks are the current measured variables. In addition to position and torque, the 16-bit value Statusword is also output. This is generated by the control logic of the terminals and indicates the current status of the motors.
+  - Each bit has its own meaning, which can be taken from the instructions for the respective terminal or the display in the higher-level system in Simulink.
+  - The inputs of the interface block consist of the control word and a commanded variable. Which control value can be used depends on the current operating mode of the module. Position control, speed control and current control are possible on this test rig. By default, the robot is in the current-controlled state. Like the statusword, the controlword is a 16-bit value where each bit has its own meaning. The controlword gives the servo terminals control specifications such as “current on”, “motor on”, “brakes on”, “emergency off” etc. Further details can be found in the instructions for the terminal.
+  - The measurement data received by the interface block is raw data. In this block, the measured variables are interpreted and converted into physical variables. Each variable is first converted into a double.
 
 
 ## Operating the simulation
