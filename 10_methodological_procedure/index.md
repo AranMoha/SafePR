@@ -24,7 +24,7 @@ The first assumption is that unwanted contacts only exert forces on the PR.
 A feedforward neural network (FNN) for binary clamp and collision classification was built with the estimation of the disturbance observer.
 
 ## Video
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=HaazrQsKVhY&list=PL4CTZWpCaHQkNZIBynOHFW0PTDxjiGFT5&index=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtu.be/HaazrQsKVhY?si=8DpXQBM71zcANZ1v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TMLpRXZHuLA?si=7h0NEn7rlYwk9cts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -49,7 +49,7 @@ Physically modeled features describing the position of the line of action of the
 Platform collisions are isolated and identified with an explicit solution, while a particle filter estimates the location and force of other contacts.
 
 ## Video
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=xD6Zaj6p1f8&list=PL4CTZWpCaHQkNZIBynOHFW0PTDxjiGFT5&index=2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtu.be/xD6Zaj6p1f8?si=FLHMEpotQ-BkUukG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 # Reaction
 Clamping reactions using a structural opening are performed based on the clamping gap between two segments of the previously classified affected leg chain by calculating the gradient of the clamping joint angle in relation to the rotational platform coordinates, which corresponds to the direction of rotation of the platform to the gap opening.
@@ -59,7 +59,7 @@ The advantage of this reaction method is that it is independent of the contact l
 The retraction in the direction of the line of action takes place only via the translational platform coordinates and provides an immediate reaction.
 
 ## Video
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=pcIBYYhcWk4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtu.be/pcIBYYhcWk4?si=jempzsBbnGImf_7Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 # Redundancy Resolution
 However, there are limits to the robot, such as joint angle limits or passing through a singularity in the workspace.
