@@ -24,6 +24,7 @@ The first assumption is that unwanted contacts only exert forces on the PR.
 A feedforward neural network (FNN) for binary clamp and collision classification was built with the estimation of the disturbance observer.
 
 ## Video
+
 <iframe width="560" height="315" src="https://youtu.be/HaazrQsKVhY?si=8DpXQBM71zcANZ1v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
