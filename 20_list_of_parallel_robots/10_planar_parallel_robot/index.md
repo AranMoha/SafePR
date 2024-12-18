@@ -83,18 +83,16 @@ This section explains the test execution, the initialization script (``PR_Planar
 </p>
 
 
-1. Entwicklungsrechner: Matlab starten und Initialisierung
-  - Skript ``PR_Planar_Testbench_2018_Init.m`` ausführen. Dadurch werden Pfade, kinematische und dynamische Parameter gesetzt.
-2. Entwicklungsrechner: Simulink-Modell öffnen, gestalten, kompilieren und auf den Echtzeitrechner kopieren       
-  - Öffne ``PR_Planar_Testbench_2018.mdl``.
-  - Öffne ``PR_Planar_Controlpanel.mlapp``. Damit wird die GUI gestartet, um Sollposen oder Reglerparametrierungen an den Echtzeitrechner zu übergeben.
-  - Modell kompilieren mit ``Ctrl+B``
-3. Entwicklungsrechner ``$ ./build.sh && ./sync.sh`` Dadurch wird das Kompilat über über eine ssh-Verbindung auf den Echtzeitrechner kopiert.
-4. Entwicklugngsrechner: connect to RT-PC via ``$ ssh RTPC_ec`` and on RT-PC ``$ sudo /etc/init.d/ethercat start`` (start EtherCAT master)
-5. Echtzeitrechner ``~/app_interface/ros_install/scripts/autostart.sh && tmux attach-session -t app``
-  - Wichtiger Hinweis: Beenden der Ausführung ist durch //Strg-C// im Terminal möglich.
-  1. Entwicklungsrechner: External Mode starten
-  2. Execute the GUI via the following steps
+1. Dev-PC: Start Matlab and run ``PR_Planar_Testbench_2018_Init.m``. This sets paths, kinematic and dynamic parameters.
+2. Dev-PC: Open, design and compile the Simulink model and copy it to the RT-PC       
+  - Open ``PR_Planar_Testbench_2018.mdl``.
+  - Open ``PR_Planar_Controlpanel.mlapp``. This starts the GUI to transfer target poses or controller parameterizations to the RT-PC.
+  - Compile model with ``Ctrl+B``
+3. Dev-PC: ``$ ./build.sh && ./sync.sh`` This copies the compilation to the real-time computer via an ssh connection.
+4. Dev-PC: connect to RT-PC via ``$ ssh RTPC_ec`` and on RT-PC ``$ sudo /etc/init.d/ethercat start`` (start EtherCAT master)
+5. RT-PC: run ``$ ~/app_interface/ros_install/scripts/autostart.sh && tmux attach-session -t app``
+  - Note: Execution can be terminated by pressing ``Ctrl+C`` in the terminal.
+6. Dev-PC: Start external mode and run the following steps in the GUI
     1. **Set Model Name**: This should contain the name (PR_Planar_Testbench_2018) of the Simulink file and confirm by clicking the button
     2. **Start**: The robot is in the default state (in the state machine) and is waiting for an input. In this state, in which the GUI is activated but the motors are still switched off, a trajectory can be loaded and control parameters of the controllers can be changed.
     3. **Reset Incr Encoder**: Inremental encoder values are compensated by the offsets
