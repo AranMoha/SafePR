@@ -17,15 +17,13 @@ The generalized impulse calculated from measurements of motor current and angle 
 With exact dynamics modeling, the observer has an error dynamics of first order.
 Physical contacts are detected by comparing the estimated external forces component by component with predefined threshold values. The specification of threshold values is necessary because the disturbance observer is based on an uncertain kinematics and dynamics model.
 
-A Cartesian impedance controller is selected to parameterize the contact dynamics in the working space.
-A modal damping is specified to obtain critically damped contact dynamics in the workspace independent of the robot's joint angle configuration.
-
-The first assumption is that unwanted contacts only exert forces on the PR.
-A feedforward neural network (FNN) for binary clamp and collision classification was built with the estimation of the disturbance observer.
-
-## Video
+A Cartesian impedance controller is selected to parameterize the contact dynamics in the operational space.
+A modal damping is specified to obtain critically damped contact dynamics in the operational space independent of the robot's joint-angle configuration.
 
 <iframe width="560" height="315" src="https://youtube.com/embed/HaazrQsKVhY?si=8DpXQBM71zcANZ1v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+The first assumption is that unwanted contacts only exert forces on the parallel robot.
+A feedforward neural network (FNN) for binary clamp and collision classification was built with the estimation of the disturbance observer.
 
 # Kinetostatic Analysis
 Now consider a platform collision.
