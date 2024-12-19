@@ -4,7 +4,7 @@ has_children: true
 nav_order: 2
 ---
 
-The following content presents approaches for the development of control methods, as well as methods for recognizing and reacting to collision and clamping contacts, which can be used in a human-robot collaboration with parallel robots.
+The following content presents approaches for the development of control methods, as well as strategies for recognizing and reacting to collision and clamping contacts, which can be used in a human-robot collaboration with parallel robots.
 More detailed information can be found in the publications:
 - [Detection and Control](https://arxiv.org/abs/2308.09633)
 - [Collision Isolation and Identification](https://arxiv.org/abs/2308.09650)
@@ -27,10 +27,10 @@ A feedforward neural network (FNN) for binary clamp and collision classification
 
 # Kinetostatic Analysis
 We now consider a platform collision.
-The disturbance observer estimates the external force and the moment occurring with a lever, which are used to determine the line of action.
+The disturbance observer estimates the external force and the moment occurring with a lever, which is used to determine the line of action.
 Only the part of the external force that is orthogonal to the shortest distance between its line of action and the origin of the platform coordinate system causes a moment.
 Mathematically, this corresponds to an underdetermined system of equations whose solution is described by a scalar quantity lambda.
-If the platform outer shell is known, the two intersection points lambda_1, lambda_2 can be determined, which correspond to a pull force (lambda_1) and a push force (lambda_2).
+If the platform's outer shell is known, the two intersection points lambda_1 and lambda_2 can be determined, which correspond to a pull force (lambda_1) and a push force (lambda_2).
 Unintentional contacts are assumed to be the latter.
 The minimum distance to the platform coupling joint of the kinematic chains is now calculated from the line of action.
 
@@ -38,7 +38,7 @@ The minimum distance to the platform coupling joint of the kinematic chains is n
 # Localization & Isolation
 Link collisions differ from platform contact by the minimum distance, which is not equal to zero.
 The physical explanation is that contact on the chain acts on the platform coordinates via the passive coupling joint and its line of action therefore intersects the joint.			
-Furthermore, it can be observed that a contact at the first link leads to a projected line of action that is parallel (anti-parallel) to the second link, while a contact at the second link includes the angle between the line of action and the position vector from the passive joint to the platform coupling joint.
+Furthermore, it can be observed that a contact at the first link leads to a projected line of action that is parallel (anti-parallel) to the second link. In contrast, a contact at the second link includes the angle between the line of action and the position vector from the passive joint to the platform coupling joint.
 
 Physically modeled features describing the position and orientation of the line of action of the external forces are used to classify the collided body or the clamping leg chain.
 Platform collisions are isolated and identified with an explicit solution, while a particle filter estimates the location and force of other contacts.
