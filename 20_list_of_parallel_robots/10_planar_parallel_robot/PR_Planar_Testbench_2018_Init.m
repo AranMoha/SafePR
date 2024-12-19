@@ -17,8 +17,6 @@ addpath(fullfile(this_path, 'ros_rt_interface'));
 if exist(fullfile(this_path, 'ros_rt_interface', 'build'), 'dir')~=0
     run(fullfile(this_path, 'ros_rt_interface', 'pcu_ros_load_buses.m')); % Load bus definitions for Simulink
     addpath(fullfile(this_path, 'ros_rt_interface', 'build'));
-else
-    addpath('C:\Users\mohammad_admin\seadrive_root\aran.moh\Für mich freigegeben\imes-projekt-dfg_mrkpkm\03_Entwicklung\10_3RRR\10_Messdaten\Messdaten');    
 end
 %% Setting kinematic and dynamic parameters
 % Selection of dynamic and safety parameters for real-world test bench
