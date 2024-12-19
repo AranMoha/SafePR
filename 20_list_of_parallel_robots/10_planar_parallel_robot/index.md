@@ -39,13 +39,13 @@ The figure shows the methodological procedure. Target poses are specified via a 
 The figure shows the simulink model on the highest level to depict the signal flow diagram of the test bench.
 
 - **Control panel**
-  - The control panel (GUI) makes it possible to change parameters in the Simulink model at runtime. Since the model must be compiled before it is executed, the workspace is already predefined at program start and can no longer be changed. However, it is possible to subsequently change the memory allocated for individual parameters during compilation using the GUI. This means that only values can be changed at runtime, but not added.
+  - The control panel (GUI) makes it possible to change parameters in the Simulink model at runtime. Since the model must be compiled before it is executed, the workspace is already predefined at program start and can no longer be changed. However, it is possible to subsequently change the memory allocated for individual parameters during compilation using the GUI. This means that values can only be changed at runtime but not added.
 - **Init_Block**
   - The subsystem contains a separate state machine for each motor. This is designed to ensure that the motors run through a predefined initialization protocol when they are switched on. If the *start_int* (enable drive from control panel) gets true (“Motor on/off” command set by the user), the initial state is exited. From now on, the real-time computer and servo controller exchange *statusword* and *controlword* in order to ultimately keep the motor switched on and ready for operation in the final state. Running through this state machine only takes a few cycles. If an error occurs, the *start_int* value is set to false and the motor switches off.
 - **Kinematics**
   - In this subsystem, the measured variables of the active and passive joints are used to determine platform pose and speed. The end-effector pose, velocity and acceleration are calculated here using the robot's forward and differential kinematics. The angles and velocities of the passive joints are also calculated.
 - **Logic**
-  - This subsystem is responsible for the entire logic. The trajectory planning for a point-to-point movement is calculated here and the trajectory files are also loaded. The output of this subsystem is the target pose, speed, acceleration in joint- and operational-space coordinates for reaction movements, as well as  parameters of the underlying state machine.
+  - This subsystem is responsible for the entire logic. The trajectory planning for a point-to-point movement is calculated here, and the trajectory files are loaded. The output of this subsystem is the target pose, speed and acceleration in joint- and operational-space coordinates for reaction movements, as well as parameters of the underlying state machine.
   - *State machine*
     - The state machine is controlled via user input in the GUI and can basically be divided into three branches for planned movements. The first controls the logic of a point-to-point movement with an acceleration-trajectory profile. The second controls the logic of the movement to the home pose and the third takes care of the correct execution of the trajectories.
     - Two further states are there to prevent errors through safety functions. The following points are addressed with the safety functions:
@@ -54,7 +54,7 @@ The figure shows the simulink model on the highest level to depict the signal fl
       - Contact detection
       - Self-collision
       - NaN values from the generalized-momentum observer
-    - The final branch with three states are only active if a contact is detected and a reaction is enabled by the user.
+    - The final branch with three states is only active if a contact is detected and the user enables a reaction.
     - Another criterion checks the user input and is set by the state machine. If the user presses the *Terminate* button in the GUI during a movement execution and before the last target platform pose is reached, the commanded motor torques are set to zero and the motors are switched off.
 - **Dynamics**
   - Here, the individual dynamic terms are calculated on the basis of the minimum dynamic parameters and the kinematic parameters. The dynamic terms from this system therefore describe the current actual state of the robot. The functions used in the model were first set up analytically using the symbolic calculation program Maple and then exported to Matlab code.
@@ -64,9 +64,9 @@ The figure shows the simulink model on the highest level to depict the signal fl
 - **Control**
   - This section contains the Cartesian impedance control and the code for the nullspace projection. In addition, the commanded motor torques are checked for plausibility (inf or nan).
 - **Communication**
-  - This subsystem contains the interface blocks of the EtherLab library. The outputs of the blocks are the current measured variables. In addition to position and torque, the 16-bit value Statusword is also output. This is generated by the control logic of the hardware and indicates the current status of the motors.
-  - Each bit has its own meaning, which can be taken from the instructions for the respective motor.
-  - The inputs of the interface block consist of the control word and a commanded variable. The control value depends on the current operating mode of the module. Position control, speed control and current control are possible on this test rig. By default, the robot is in the current-controlled state. Like the statusword, the controlword is a 16-bit value where each bit has its own meaning. The controlword gives the servo terminals control specifications such as “current on”, “motor on”, “brakes on”, “emergency off” etc. Further details can be found in the instructions for the drives.
+  - This subsystem contains the interface blocks of the EtherLab library. The outputs of the blocks are the current measured variables. In addition to position and torque, the 16-bit value *statusword* is also output. The control logic of the hardware  generates this and indicates the current status of the motors.
+  - Each bit has its meaning, which can be taken from the instructions for the respective motor.
+  - The inputs of the interface block consist of the *controlword* and a commanded variable. The control value depends on the module's current operating mode. Position control, speed control and current control are possible on this test rig. By default, the robot is in the current-controlled state. Like the *statusword*, the *controlword* is a 16-bit value where each bit has its own meaning. The *controlword* gives the servo terminals control specifications such as “current on”, “motor on”, “brakes on”, “emergency off” etc. Further details can be found in the instructions for the drives.
   - The measurement data received by the interface block is raw data. In this block, the measured variables are interpreted and converted into physical variables. Each variable is first converted into a double.
 
 
@@ -94,9 +94,9 @@ This section explains the test execution, the initialization script (``PR_Planar
   - Note: Execution can be terminated by pressing ``Ctrl+C`` in the terminal.
 6. Dev-PC: Start external mode and run the following steps in the GUI
     1. **Set Model Name**: This should contain the name (PR_Planar_Testbench_2018) of the Simulink file and confirm by clicking the button
-    2. **Start**: The robot is in the default state (in the state machine) and is waiting for an input. In this state, in which the GUI is activated but the motors are still switched off, a trajectory can be loaded and control parameters of the controllers can be changed.
-    3. **Reset Incr Encoder**: Inremental encoder values are compensated by the offsets
-    4. **Enable Drive**: Switching on the motors via communication between host and target (controlword and statusword)
+    2. **Start**: The robot is in the default state (in the state machine) and is waiting for an input. In this state, in which the GUI is activated but the motors are still switched off, a trajectory can be loaded and the control parameters of the controllers can be changed.
+    3. **Reset Incr Encoder**: Incremental-encoder values are compensated by the offsets
+    4. **Enable Drive**: Switching on the motors via communication between host and target (controlword and *statusword*)
     5. You can now move to a target position by pressing **Go to Target** or the start position with **Home Pose** or a trajectory with **Trajectory**. If the robot behaves unplanned, the motor is switched off directly by pressing the **Terminate** button.
     6. As soon as the movement is complete, press **Terminate** and follow step 5 again.
     7. When all drives are finished, then **Terminate** (if not already done) --> **Disable Drive** --> **Stop** and end Simulink execution
@@ -111,8 +111,8 @@ This section explains the test execution, the initialization script (``PR_Planar
 4. Execute the simulink model `PR_Planar_Testbench_2018.mdl`
 5. Execute the GUI via the following steps
     1. **Set Model Name**: This should contain the name of the Simulink file and confirm by clicking the button
-    2. **Start**: The robot is in the default state (in the state machine) and is waiting for an input. In this state, in which the GUI is activated but the motors are still switched off, a trajectory can be loaded and control parameters of the controllers can be changed.
-    3. **Enable Drive** and then **Set Statuswort**: Switching on the motors and simulated communication between host and target via status word and control word
+    2. **Start**: The robot is in the default state (in the state machine) and is waiting for an input. In this state, in which the GUI is activated but the motors are still switched off, a trajectory can be loaded and the control parameters of the controllers can be changed.
+    3. **Enable Drive** and then **Set Statuswort**: Switching on the motors and simulated communication between host and target via *statusword* and *controlword*
     4. You can now move to a target position by pressing **Go to Target** or the start position with **Home Pose** or a trajectory with **Trajectory**. The robot in the MuJoCo animation should move. If the robot behaves unplanned, the motor is switched off directly by pressing the **Terminate** button.
     5. As soon as the movement is complete, press **Terminate** and follow step 4 again.
     6. When all drives are finished, then **Terminate** (if not already done) --> **Disable Drive** --> **Stop** and end Simulink execution
