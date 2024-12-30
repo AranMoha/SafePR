@@ -64,10 +64,11 @@ The figure shows the simulink model on the highest level to depict the signal fl
 - **Control**
   - This section contains the Cartesian impedance control and the code for the nullspace projection. In addition, the commanded motor torques are checked for plausibility (inf or nan).
 - **Communication**
-  - This subsystem contains the interface blocks of the EtherLab library. The outputs of the blocks are the current measured variables. In addition to position and torque, the 16-bit value *statusword* is also output. The control logic of the hardware  generates this and indicates the current status of the motors.
+  - This subsystem contains the EtherLab library. The outputs of the blocks are the current measured variables. In addition to position and torque, the 16-bit value *statusword* is also output. The control logic of the hardware  generates this and indicates the current status of the motors.
   - Each bit has its meaning, which can be taken from the instructions for the respective motor.
   - The inputs of the interface block consist of the *controlword* and a commanded variable. The control value depends on the module's current operating mode. Position control, speed control and current control are possible on this test rig. By default, the robot is in the current-controlled state. Like the *statusword*, the *controlword* is a 16-bit value where each bit has its own meaning. The *controlword* gives the servo terminals control specifications such as “current on”, “motor on”, “brakes on”, “emergency off” etc. Further details can be found in the instructions for the drives.
   - The measurement data received by the interface block is raw data. In this block, the measured variables are interpreted and converted into physical variables. Each variable is first converted into a double.
+  - The force-torque sensor's measurements are also fed into the Simulink communication, which are integrated via a shared-memory interface for the PCIe driver.
 
 
 ## Operating the test bench

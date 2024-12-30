@@ -32,7 +32,7 @@ TBD
 
 ## Citing
 ```
-SafePR: A Unified Approach for Safe Parallel Robots by Contact Detection and Reaction with Redundancy Resolution
+SafePR: Unified Approach for Safe Parallel Robots by Contact Detection and Reaction with Redundancy Resolution
 A. Mohammad, T.-L. Habich, T. Seel and M. Schappler
 TBD
 DOI: TBD
