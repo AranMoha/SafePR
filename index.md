@@ -8,7 +8,7 @@ nav_order: 1
 
 # Welcome to the documentation of SafePR!
 
-SafePR is a unified approach for **safe** **p**arallel **r**obot for physical human-robot interaction that is being developed at the Leibniz University Hannover by the [Institute of Mechatronic Systems](https://www.imes.uni-hannover.de/en/).
+SafePR is a unified approach for **safe** **p**arallel **r**obots for physical human-robot interaction that is being developed at the Leibniz University Hannover by the [Institute of Mechatronic Systems](https://www.imes.uni-hannover.de/en/).
 
 ## Why SafePR?
 This page's motivation is twofold.
@@ -19,7 +19,7 @@ However, they require methods for contact detection and reaction in high-speed s
 In the works linked below, we address this issue and present **a unified approach**, termed SafePR, for **detection**, **type-distinguishing**, as well as **localizing** the contacts, to perform a **reaction** that is safe for humans and feasible for the parallel robot.
 
 Secondly, the **commissioning of custom-built robot systems** is complex.
-Many works already use commercially available systems that do not (or cannot) always allow full access to real-time signals, such as commanding joint torques. For these reasons, the complete **Simulink model of the SafePR algorithm** can also be found here.
+Many works already use commercially available systems that do not (or cannot) always allow full access to real-time signals, such as commanding joint torques. For these reasons, the complete **Simulink model of SafePR** can also be found here.
 This includes not only the algorithmic integration of the contact detection and reaction methods but also the implementation of the logic to control a mechatronic system in a robust and repeatable manner.
 
 The corresponding code can be found and is described here to give other researchers the opportunity to use and further develop it.
@@ -49,4 +49,4 @@ DOI: TBD
 SafePR is part of the PhD thesis of [Aran Mohammad](https://www.imes.uni-hannover.de/en/institute/team/m-sc-aran-mohammad) (Email: <aran.mohammad@imes.uni-hannover.de>) and was developed with support from colleagues (Moritz Schappler, Tim-Lukas Habich, Thomas Seel).
 
 ## Acknowledgment
-The authors acknowledge the support of the German Research Foundation~(DFG) under grant number 444769341.
+The authors acknowledge the support of the German Research Foundation (DFG) under grant number 444769341.

@@ -1,11 +1,11 @@
 ---
 title: Planar Parallel Robot
-parent: List of Parallel Robots
+parent: Overview
 has_children: true
-nav_order: 3
+nav_order: 2
 ---
 <p align="center">
-<img src="../../images/20_planarPR.png" width=500>
+<img src="../images/20_planarPR.png" width=500>
 </p>
 
 # Planar Parallel Robot
@@ -30,11 +30,11 @@ The [repository](https://github.com/AranMoha/SafePR/tree/main/20_list_of_paralle
 ## Simulink model
 This section provides an understanding of the Simulink model, which is used to operate the planar PR. The individual subsystems are described.
 <p align="center">
-<img src="../../images/30_flowchart.png" width=700>
+<img src="../images/30_flowchart.png" width=700>
 </p>
 The figure shows the methodological procedure. Target poses are specified via a GUI, after which an acceleration-trapezoidal profile is planned. The target poses, velocities and accelerations are demanded incrementally by 1kHz. The detection, classification, localization, identification and reaction are also shown.
 <p align="center">
-<img src="../../images/41_simulink.png" width=450>
+<img src="../images/41_simulink.png" width=450>
 </p>
 The figure shows the simulink model on the highest level to depict the signal flow diagram of the test bench.
 
@@ -80,7 +80,7 @@ The figure shows the simulink model on the highest level to depict the signal fl
 Simulink in Matlab version 2018b is used to operate the planar parallel robot. Later versions must first be exported to the 2018b version in Simulink under *File->Export Model to->Previous Version*.
 This section explains the test execution, the initialization script (``PR_Planar_Testbench_2018_Init.m``) and the post-processing script (``Read_Data.m``). The basic procedure is shown in the following illustration.
 <p align="center">
-<img src="../../images/50_dv_rt_pc_process.png" width=500>
+<img src="../images/50_dv_rt_pc_process.png" width=500>
 </p>
 
 
