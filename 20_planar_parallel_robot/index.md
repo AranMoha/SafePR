@@ -1,6 +1,5 @@
 ---
 title: Planar Parallel Robot
-parent: Overview
 has_children: true
 nav_order: 2
 ---
@@ -10,7 +9,7 @@ nav_order: 2
 
 # Planar Parallel Robot
 ## Structure
-The [repository](https://github.com/AranMoha/SafePR/tree/main/20_list_of_parallel_robots/10_planar_parallel_robot) of the planar parallel robot is structured as follows
+The [repository](https://github.com/AranMoha/SafePR/tree/main/20_planar_parallel_robot) of the planar parallel robot is structured as follows
 - `catkin_ws`: ROS workspace
 - `ros_rt_interface`: Real-time interface (in the Simulink model)
 - `PR_Planar_Controlpanel.mlapp`: Graphical user interface to parameterize the simulink model
