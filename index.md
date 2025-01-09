@@ -27,8 +27,8 @@ The corresponding code can be found and is described here to give other research
 **In the left column**, further information can be found regarding the Simulink model for the simulation as well as the execution of experiments on the test bench.
 In addition, the core ideas of the individual steps of SafePR are described.
 
-## Video
-TBD
+%## Video
+%TBD
 
 ## Citing
 ```
