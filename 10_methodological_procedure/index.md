@@ -7,6 +7,7 @@ nav_order: 2
 The following content presents approaches for the development of control methods, as well as strategies for recognizing and reacting to collision and clamping contacts, which can be used in a human-robot collaboration with parallel robots.
 More detailed information can be found in the publications:
 - [Detection and Control](https://arxiv.org/abs/2308.09633)
+- [Fusion of Joint and Inertial Sensors for Detection](https://arxiv.org/abs/2505.08334)
 - [Collision Isolation and Identification](https://arxiv.org/abs/2308.09650)
 - [Collision and Clamping Reaction](https://arxiv.org/abs/2308.09656)
 - [Uncertainties of Contact Classifications](https://arxiv.org/abs/2308.09675)

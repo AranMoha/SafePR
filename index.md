@@ -27,15 +27,16 @@ The corresponding code can be found and is described here to give other research
 **In the left column**, further information can be found regarding the Simulink model for the simulation as well as the execution of experiments on the test bench.
 In addition, the core ideas of the individual steps of SafePR are described.
 
-%## Video
-%TBD
+## Video
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=d_Q8FN0XbU0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Citing
+The paper is [freely available](https://arxiv.org/abs/2501.17773) via arXiv. If you use parts of this project for your research, please cite the following publication:
 ```
 SafePR: Unified Approach for Safe Parallel Robots by Contact Detection and Reaction with Redundancy Resolution
 A. Mohammad, T.-L. Habich, T. Seel and M. Schappler
-TBD
-DOI: TBD
+IEEE Transactions on Robotics
+DOI: 10.1109/TRO.2026.3666147
 ```
 ## Further Publications
 - [Towards Human-Robot Collaboration with Parallel Robots by Kinetostatic Analysis, Impedance Control and Contact Detection (IEEE ICRA 2023)](https://arxiv.org/abs/2308.09633)
@@ -43,10 +44,11 @@ DOI: TBD
 - [Safe Collision and Clamping Reaction for Parallel Robots During Human-Robot Collaboration (IEEE/RSJ IROS 2023)](https://arxiv.org/abs/2308.09656)
 - [Quantifying Uncertainties of Contact Classifications in a Human-Robot Collaboration with Parallel Robots (HFR 2023)](https://arxiv.org/abs/2308.09675)
 - [Towards Optimized Parallel Robots for Human-Robot Collaboration by Combined Structural and Dimensional Synthesis (VDIM 2024)](https://arxiv.org/abs/2408.15831)
+- [Fast Contact Detection via Fusion of Joint and Inertial Sensors for Parallel Robots in Human-Robot Collaboration (IEEE RA-L 2025)](https://arxiv.org/abs/2505.08334)
 - Stay tuned for more!
 
 ## Authors
-SafePR is part of the PhD thesis of [Aran Mohammad](https://www.imes.uni-hannover.de/en/institute/team/m-sc-aran-mohammad) (Email: <aran.mohammad@imes.uni-hannover.de>) and was developed with support from colleagues (Moritz Schappler, Tim-Lukas Habich, Thomas Seel).
+SafePR is part of the PhD thesis of Aran Mohammad (Email: <aran.mohammad@imes.uni-hannover.de>) and was developed with support from colleagues (Moritz Schappler, Tim-Lukas Habich, Thomas Seel).
 
 ## Acknowledgment
 The authors acknowledge the support of the German Research Foundation (DFG) under grant number 444769341.
